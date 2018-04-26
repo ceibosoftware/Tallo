@@ -7,7 +7,11 @@
         End If
     End Sub
 
-
+    Private Sub FrmAgregarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtTelefonoCliente.MaxLength = 10
+        txtDniCliente.MaxLength = 8
+        txtNombre.Select()
+    End Sub
 
     Private Function Valida() As Boolean
         If String.IsNullOrEmpty(txtApellidoCliente.Text) Or String.IsNullOrEmpty(txtDireccionCliente.Text) Or String.IsNullOrEmpty(txtNombre.Text) Or String.IsNullOrEmpty(txtDniCliente.Text) Or String.IsNullOrEmpty(txtTelefonoCliente.Text) Then
@@ -21,6 +25,7 @@
 
     Private Sub button2_Click(sender As Object, e As EventArgs) Handles button2.Click
         Close()
+        Me.Dispose()
     End Sub
 
     Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
@@ -71,7 +76,18 @@
         End If
     End Sub
 
-    Private Sub FrmAgregarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
+
+    Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
+
+        Dim modifiers As Keys = (keyData And Keys.Modifiers)
+        Dim key As Keys = (keyData And Keys.KeyCode)
+        If (key.Equals(Keys.Escape)) Then
+            Me.Close()
+        End If
+
+
+        Return MyBase.ProcessCmdKey(msg, keyData)
+    End Function
+
 End Class

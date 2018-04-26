@@ -2,15 +2,16 @@
 <xs:schema id="becharaDataSet" targetNamespace="http://tempuri.org/becharaDataSet.xsd" xmlns:mstns="http://tempuri.org/becharaDataSet.xsd" xmlns="http://tempuri.org/becharaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="becharaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="becharaConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BecharaVB.My.MySettings.GlobalReference.Default.becharaConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="becharaConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="becharaConnectionString2 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BecharaVB.My.MySettings.GlobalReference.Default.becharaConnectionString2" Provider="MySql.Data.MySqlClient" />
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="becharaConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="becharaConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BecharaVB.My.MySettings.GlobalReference.Default.becharaConnectionString1" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="autosTableAdapter" GeneratorDataComponentClassName="autosTableAdapter" Name="autos" UserDataComponentName="autosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="becharaConnectionString (MySettings)" DbObjectName="bechara.autos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="becharaConnectionString1 (MySettings)" DbObjectName="bechara.autos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `autos` WHERE ((`idAuto` = @p1) AND (`marca` = @p2) AND (`modelo` = @p3) AND (`anio` = @p4) AND ((@p5 = 1 AND `color` IS NULL) OR (`color` = @p6)) AND ((@p7 = 1 AND `imagen` IS NULL) OR (`imagen` = @p8)) AND (`filtroAceite` = @p9) AND (`filtroAire` = @p10) AND (`filtroCombustible` = @p11) AND (`filtroHabitaculo` = @p12) AND (`aceiteMotor` = @p13) AND (`kilometraje` = @p14) AND (`distribucion` = @p15) AND (`tipoCombustible` = @p16) AND (`clientes_idCliente` = @p17) AND (`patente` = @p18))</CommandText>
@@ -60,7 +61,7 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT idAuto, marca, modelo, anio, color, imagen, filtroAceite, filtroAire, filtroCombustible, filtroHabitaculo, aceiteMotor, kilometraje, distribucion, tipoCombustible, clientes_idCliente, patente FROM autos</CommandText>
+                    <CommandText>SELECT `idAuto`, `marca`, `modelo`, `anio`, `color`, `imagen`, `filtroAceite`, `filtroAire`, `filtroCombustible`, `filtroHabitaculo`, `aceiteMotor`, `kilometraje`, `distribucion`, `tipoCombustible`, `clientes_idCliente`, `patente` FROM `autos`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -128,7 +129,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clientesTableAdapter" GeneratorDataComponentClassName="clientesTableAdapter" Name="clientes" UserDataComponentName="clientesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="becharaConnectionString (MySettings)" DbObjectName="bechara.clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="becharaConnectionString1 (MySettings)" DbObjectName="bechara.clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `clientes` WHERE ((`idCliente` = @p1) AND (`nombre` = @p2) AND (`apellido` = @p3) AND (`direccion` = @p4) AND (`telefono` = @p5) AND (`fechaNacimiento` = @p6) AND (`dni` = @p7))</CommandText>
@@ -137,7 +138,7 @@
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="apellido" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="direccion" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaNacimiento" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="dni" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -150,7 +151,7 @@
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="apellido" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaNacimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="dni" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
@@ -169,14 +170,14 @@
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="apellido" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaNacimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="dni" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idCliente" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="apellido" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="direccion" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaNacimiento" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="dni" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -195,9 +196,158 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ordentrabajoTableAdapter" GeneratorDataComponentClassName="ordentrabajoTableAdapter" Name="ordentrabajo" UserDataComponentName="ordentrabajoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="becharaConnectionString1 (MySettings)" DbObjectName="bechara.ordentrabajo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `ordentrabajo` WHERE ((`idOrdenTrabajo` = @p1) AND ((@p2 = 1 AND `observaciones` IS NULL) OR (`observaciones` = @p3)) AND (`fechaEntrada` = @p4) AND (`fechaSalida` = @p5) AND (`precioTotal` = @p6) AND (`precioManoObra` = @p7) AND (`precioRespuesto` = @p8) AND (`bechara` = @p9) AND (`clientes_idCliente` = @p10) AND (`autos_idAuto` = @p11) AND ((@p12 = 1 AND `terminado` IS NULL) OR (`terminado` = @p13)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaEntrada" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaSalida" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioManoObra" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioRespuesto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="bechara" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="clientes_idCliente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="autos_idAuto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="terminado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="terminado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `ordentrabajo` (`observaciones`, `fechaEntrada`, `fechaSalida`, `precioTotal`, `precioManoObra`, `precioRespuesto`, `bechara`, `clientes_idCliente`, `autos_idAuto`, `terminado`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaEntrada" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaSalida" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioManoObra" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioRespuesto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="bechara" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="clientes_idCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="autos_idAuto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="terminado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `idOrdenTrabajo`, `observaciones`, `fechaEntrada`, `fechaSalida`, `precioTotal`, `precioManoObra`, `precioRespuesto`, `bechara`, `clientes_idCliente`, `autos_idAuto`, `terminado` FROM `ordentrabajo`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `ordentrabajo` SET `observaciones` = @p1, `fechaEntrada` = @p2, `fechaSalida` = @p3, `precioTotal` = @p4, `precioManoObra` = @p5, `precioRespuesto` = @p6, `bechara` = @p7, `clientes_idCliente` = @p8, `autos_idAuto` = @p9, `terminado` = @p10 WHERE ((`idOrdenTrabajo` = @p11) AND ((@p12 = 1 AND `observaciones` IS NULL) OR (`observaciones` = @p13)) AND (`fechaEntrada` = @p14) AND (`fechaSalida` = @p15) AND (`precioTotal` = @p16) AND (`precioManoObra` = @p17) AND (`precioRespuesto` = @p18) AND (`bechara` = @p19) AND (`clientes_idCliente` = @p20) AND (`autos_idAuto` = @p21) AND ((@p22 = 1 AND `terminado` IS NULL) OR (`terminado` = @p23)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaEntrada" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaSalida" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioManoObra" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioRespuesto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="bechara" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="clientes_idCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="autos_idAuto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="terminado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaEntrada" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaSalida" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioManoObra" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p18" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioRespuesto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p19" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="bechara" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p20" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="clientes_idCliente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p21" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="autos_idAuto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p22" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="terminado" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p23" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="terminado" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idOrdenTrabajo" DataSetColumn="idOrdenTrabajo" />
+              <Mapping SourceColumn="observaciones" DataSetColumn="observaciones" />
+              <Mapping SourceColumn="fechaEntrada" DataSetColumn="fechaEntrada" />
+              <Mapping SourceColumn="fechaSalida" DataSetColumn="fechaSalida" />
+              <Mapping SourceColumn="precioTotal" DataSetColumn="precioTotal" />
+              <Mapping SourceColumn="precioManoObra" DataSetColumn="precioManoObra" />
+              <Mapping SourceColumn="precioRespuesto" DataSetColumn="precioRespuesto" />
+              <Mapping SourceColumn="bechara" DataSetColumn="bechara" />
+              <Mapping SourceColumn="clientes_idCliente" DataSetColumn="clientes_idCliente" />
+              <Mapping SourceColumn="autos_idAuto" DataSetColumn="autos_idAuto" />
+              <Mapping SourceColumn="terminado" DataSetColumn="terminado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ordentrabajo_has_tipotrabajoTableAdapter" GeneratorDataComponentClassName="ordentrabajo_has_tipotrabajoTableAdapter" Name="ordentrabajo_has_tipotrabajo" UserDataComponentName="ordentrabajo_has_tipotrabajoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="becharaConnectionString1 (MySettings)" DbObjectName="bechara.ordentrabajo_has_tipotrabajo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `ordentrabajo_has_tipotrabajo` WHERE ((`id` = @p1) AND (`ordentrabajo_idOrdenTrabajo` = @p2) AND (`tipotrabajo_idTipoTrabajo` = @p3) AND ((@p4 = 1 AND `precio` IS NULL) OR (`precio` = @p5)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ordentrabajo_idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `ordentrabajo_has_tipotrabajo` (`ordentrabajo_idOrdenTrabajo`, `tipotrabajo_idTipoTrabajo`, `precio`) VALUES (@p1, @p2, @p3)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ordentrabajo_idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id`, `ordentrabajo_idOrdenTrabajo`, `tipotrabajo_idTipoTrabajo`, `precio` FROM `ordentrabajo_has_tipotrabajo`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `ordentrabajo_has_tipotrabajo` SET `ordentrabajo_idOrdenTrabajo` = @p1, `tipotrabajo_idTipoTrabajo` = @p2, `precio` = @p3 WHERE ((`id` = @p4) AND (`ordentrabajo_idOrdenTrabajo` = @p5) AND (`tipotrabajo_idTipoTrabajo` = @p6) AND ((@p7 = 1 AND `precio` IS NULL) OR (`precio` = @p8)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ordentrabajo_idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ordentrabajo_idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="ordentrabajo_idOrdenTrabajo" DataSetColumn="ordentrabajo_idOrdenTrabajo" />
+              <Mapping SourceColumn="tipotrabajo_idTipoTrabajo" DataSetColumn="tipotrabajo_idTipoTrabajo" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="presupuestoTableAdapter" GeneratorDataComponentClassName="presupuestoTableAdapter" Name="presupuesto" UserDataComponentName="presupuestoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="becharaConnectionString (MySettings)" DbObjectName="bechara.presupuesto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="becharaConnectionString1 (MySettings)" DbObjectName="bechara.presupuesto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `presupuesto` WHERE ((`idPresupuesto` = @p1) AND (`nombre` = @p2) AND (`apellido` = @p3) AND ((@p4 = 1 AND `direccion` IS NULL) OR (`direccion` = @p5)) AND (`patente` = @p6) AND ((@p7 = 1 AND `marca` IS NULL) OR (`marca` = @p8)) AND ((@p9 = 1 AND `modelo` IS NULL) OR (`modelo` = @p10)) AND ((@p11 = 1 AND `kilometraje` IS NULL) OR (`kilometraje` = @p12)) AND ((@p13 = 1 AND `combustible` IS NULL) OR (`combustible` = @p14)) AND ((@p15 = 1 AND `observaciones` IS NULL) OR (`observaciones` = @p16)) AND ((@p17 = 1 AND `fechaCaducidad` IS NULL) OR (`fechaCaducidad` = @p18)) AND (`precioTotal` = @p19) AND (`precioManoObra` = @p20) AND (`precioRespuesto` = @p21))</CommandText>
@@ -315,13 +465,14 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="presupuesto_has_tipotrabajoTableAdapter" GeneratorDataComponentClassName="presupuesto_has_tipotrabajoTableAdapter" Name="presupuesto_has_tipotrabajo" UserDataComponentName="presupuesto_has_tipotrabajoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="becharaConnectionString (MySettings)" DbObjectName="bechara.presupuesto_has_tipotrabajo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="becharaConnectionString1 (MySettings)" DbObjectName="bechara.presupuesto_has_tipotrabajo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `presupuesto_has_tipotrabajo` WHERE ((`presupuesto_idPresupuesto` = @p1) AND (`tipotrabajo_idTipoTrabajo` = @p2))</CommandText>
+                    <CommandText>DELETE FROM `presupuesto_has_tipotrabajo` WHERE ((`id` = @p1) AND (`presupuesto_idPresupuesto` = @p2) AND (`tipotrabajo_idTipoTrabajo` = @p3))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="presupuesto_idPresupuesto" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="presupuesto_idPresupuesto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
@@ -336,24 +487,26 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `presupuesto_idPresupuesto`, `tipotrabajo_idTipoTrabajo` FROM `presupuesto_has_tipotrabajo`</CommandText>
+                    <CommandText>SELECT `id`, `presupuesto_idPresupuesto`, `tipotrabajo_idTipoTrabajo` FROM `presupuesto_has_tipotrabajo`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `presupuesto_has_tipotrabajo` SET `presupuesto_idPresupuesto` = @p1, `tipotrabajo_idTipoTrabajo` = @p2 WHERE ((`presupuesto_idPresupuesto` = @p3) AND (`tipotrabajo_idTipoTrabajo` = @p4))</CommandText>
+                    <CommandText>UPDATE `presupuesto_has_tipotrabajo` SET `presupuesto_idPresupuesto` = @p1, `tipotrabajo_idTipoTrabajo` = @p2 WHERE ((`id` = @p3) AND (`presupuesto_idPresupuesto` = @p4) AND (`tipotrabajo_idTipoTrabajo` = @p5))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="presupuesto_idPresupuesto" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="presupuesto_idPresupuesto" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="presupuesto_idPresupuesto" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
             </MainSource>
             <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
               <Mapping SourceColumn="presupuesto_idPresupuesto" DataSetColumn="presupuesto_idPresupuesto" />
               <Mapping SourceColumn="tipotrabajo_idTipoTrabajo" DataSetColumn="tipotrabajo_idTipoTrabajo" />
             </Mappings>
@@ -361,7 +514,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tipotrabajoTableAdapter" GeneratorDataComponentClassName="tipotrabajoTableAdapter" Name="tipotrabajo" UserDataComponentName="tipotrabajoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="becharaConnectionString (MySettings)" DbObjectName="bechara.tipotrabajo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="becharaConnectionString1 (MySettings)" DbObjectName="bechara.tipotrabajo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `tipotrabajo` WHERE ((`idTipoTrabajo` = @p1) AND (`nombre` = @p2))</CommandText>
@@ -405,7 +558,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="turnosTableAdapter" GeneratorDataComponentClassName="turnosTableAdapter" Name="turnos" UserDataComponentName="turnosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="becharaConnectionString (MySettings)" DbObjectName="bechara.turnos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="becharaConnectionString1 (MySettings)" DbObjectName="bechara.turnos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `turnos` WHERE ((`idTurno` = @p1) AND (`nombre` = @p2) AND (`apellido` = @p3) AND (`telefono` = @p4) AND (`fechaTurno` = @p5) AND (`horario` = @p6))</CommandText>
@@ -413,7 +566,7 @@
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idTurno" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="apellido" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaTurno" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Time" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Time" Scale="0" Size="0" SourceColumn="horario" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -425,7 +578,7 @@
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="apellido" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaTurno" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Time" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Time" Scale="0" Size="0" SourceColumn="horario" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -444,14 +597,14 @@
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="apellido" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaTurno" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Time" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Time" Scale="0" Size="0" SourceColumn="horario" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idTurno" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombre" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="apellido" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int64" Scale="0" Size="0" SourceColumn="telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaTurno" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Time" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Time" Scale="0" Size="0" SourceColumn="horario" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -467,148 +620,6 @@
               <Mapping SourceColumn="observaciones" DataSetColumn="observaciones" />
               <Mapping SourceColumn="fechaTurno" DataSetColumn="fechaTurno" />
               <Mapping SourceColumn="horario" DataSetColumn="horario" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ordentrabajo_has_tipotrabajoTableAdapter" GeneratorDataComponentClassName="ordentrabajo_has_tipotrabajoTableAdapter" Name="ordentrabajo_has_tipotrabajo" UserDataComponentName="ordentrabajo_has_tipotrabajoTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="becharaConnectionString1 (MySettings)" DbObjectName="bechara.ordentrabajo_has_tipotrabajo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <DeleteCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `ordentrabajo_has_tipotrabajo` WHERE ((`id` = @p1) AND (`ordentrabajo_idOrdenTrabajo` = @p2) AND (`tipotrabajo_idTipoTrabajo` = @p3) AND ((@p4 = 1 AND `precio` IS NULL) OR (`precio` = @p5)))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ordentrabajo_idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </DeleteCommand>
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `ordentrabajo_has_tipotrabajo` (`ordentrabajo_idOrdenTrabajo`, `tipotrabajo_idTipoTrabajo`, `precio`) VALUES (@p1, @p2, @p3)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ordentrabajo_idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </InsertCommand>
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `id`, `ordentrabajo_idOrdenTrabajo`, `tipotrabajo_idTipoTrabajo`, `precio` FROM `ordentrabajo_has_tipotrabajo`</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-                <UpdateCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `ordentrabajo_has_tipotrabajo` SET `ordentrabajo_idOrdenTrabajo` = @p1, `tipotrabajo_idTipoTrabajo` = @p2, `precio` = @p3 WHERE ((`id` = @p4) AND (`ordentrabajo_idOrdenTrabajo` = @p5) AND (`tipotrabajo_idTipoTrabajo` = @p6) AND ((@p7 = 1 AND `precio` IS NULL) OR (`precio` = @p8)))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ordentrabajo_idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ordentrabajo_idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="tipotrabajo_idTipoTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="precio" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </UpdateCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="ordentrabajo_idOrdenTrabajo" DataSetColumn="ordentrabajo_idOrdenTrabajo" />
-              <Mapping SourceColumn="tipotrabajo_idTipoTrabajo" DataSetColumn="tipotrabajo_idTipoTrabajo" />
-              <Mapping SourceColumn="precio" DataSetColumn="precio" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ordentrabajoTableAdapter" GeneratorDataComponentClassName="ordentrabajoTableAdapter" Name="ordentrabajo" UserDataComponentName="ordentrabajoTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="becharaConnectionString1 (MySettings)" DbObjectName="bechara.ordentrabajo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <DeleteCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `ordentrabajo` WHERE ((`idOrdenTrabajo` = @p1) AND ((@p2 = 1 AND `observaciones` IS NULL) OR (`observaciones` = @p3)) AND (`fechaEntrada` = @p4) AND (`fechaSalida` = @p5) AND (`precioTotal` = @p6) AND (`precioManoObra` = @p7) AND (`precioRespuesto` = @p8) AND (`bechara` = @p9) AND (`clientes_idCliente` = @p10) AND (`autos_idAuto` = @p11))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaEntrada" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaSalida" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioManoObra" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioRespuesto" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="bechara" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="clientes_idCliente" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="autos_idAuto" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </DeleteCommand>
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `ordentrabajo` (`observaciones`, `fechaEntrada`, `fechaSalida`, `precioTotal`, `precioManoObra`, `precioRespuesto`, `bechara`, `clientes_idCliente`, `autos_idAuto`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaEntrada" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaSalida" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioManoObra" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioRespuesto" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="bechara" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="clientes_idCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="autos_idAuto" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </InsertCommand>
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `idOrdenTrabajo`, `observaciones`, `fechaEntrada`, `fechaSalida`, `precioTotal`, `precioManoObra`, `precioRespuesto`, `bechara`, `clientes_idCliente`, `autos_idAuto` FROM `ordentrabajo`</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-                <UpdateCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `ordentrabajo` SET `observaciones` = @p1, `fechaEntrada` = @p2, `fechaSalida` = @p3, `precioTotal` = @p4, `precioManoObra` = @p5, `precioRespuesto` = @p6, `bechara` = @p7, `clientes_idCliente` = @p8, `autos_idAuto` = @p9 WHERE ((`idOrdenTrabajo` = @p10) AND ((@p11 = 1 AND `observaciones` IS NULL) OR (`observaciones` = @p12)) AND (`fechaEntrada` = @p13) AND (`fechaSalida` = @p14) AND (`precioTotal` = @p15) AND (`precioManoObra` = @p16) AND (`precioRespuesto` = @p17) AND (`bechara` = @p18) AND (`clientes_idCliente` = @p19) AND (`autos_idAuto` = @p20))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaEntrada" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaSalida" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioManoObra" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioRespuesto" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="bechara" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="clientes_idCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="autos_idAuto" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idOrdenTrabajo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaEntrada" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fechaSalida" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioManoObra" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Single" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="precioRespuesto" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p18" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="bechara" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p19" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="clientes_idCliente" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p20" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="autos_idAuto" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </UpdateCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="idOrdenTrabajo" DataSetColumn="idOrdenTrabajo" />
-              <Mapping SourceColumn="observaciones" DataSetColumn="observaciones" />
-              <Mapping SourceColumn="fechaEntrada" DataSetColumn="fechaEntrada" />
-              <Mapping SourceColumn="fechaSalida" DataSetColumn="fechaSalida" />
-              <Mapping SourceColumn="precioTotal" DataSetColumn="precioTotal" />
-              <Mapping SourceColumn="precioManoObra" DataSetColumn="precioManoObra" />
-              <Mapping SourceColumn="precioRespuesto" DataSetColumn="precioRespuesto" />
-              <Mapping SourceColumn="bechara" DataSetColumn="bechara" />
-              <Mapping SourceColumn="clientes_idCliente" DataSetColumn="clientes_idCliente" />
-              <Mapping SourceColumn="autos_idAuto" DataSetColumn="autos_idAuto" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -739,9 +750,42 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:int" />
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:long" />
               <xs:element name="fechaNacimiento" msprop:Generator_ColumnVarNameInTable="columnfechaNacimiento" msprop:Generator_ColumnPropNameInRow="fechaNacimiento" msprop:Generator_ColumnPropNameInTable="fechaNacimientoColumn" msprop:Generator_UserColumnName="fechaNacimiento" type="xs:dateTime" />
               <xs:element name="dni" msprop:Generator_ColumnVarNameInTable="columndni" msprop:Generator_ColumnPropNameInRow="dni" msprop:Generator_ColumnPropNameInTable="dniColumn" msprop:Generator_UserColumnName="dni" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ordentrabajo" msprop:Generator_TableClassName="ordentrabajoDataTable" msprop:Generator_TableVarName="tableordentrabajo" msprop:Generator_TablePropName="ordentrabajo" msprop:Generator_RowDeletingName="ordentrabajoRowDeleting" msprop:Generator_RowChangingName="ordentrabajoRowChanging" msprop:Generator_RowEvHandlerName="ordentrabajoRowChangeEventHandler" msprop:Generator_RowDeletedName="ordentrabajoRowDeleted" msprop:Generator_UserTableName="ordentrabajo" msprop:Generator_RowChangedName="ordentrabajoRowChanged" msprop:Generator_RowEvArgName="ordentrabajoRowChangeEvent" msprop:Generator_RowClassName="ordentrabajoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idOrdenTrabajo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidOrdenTrabajo" msprop:Generator_ColumnPropNameInRow="idOrdenTrabajo" msprop:Generator_ColumnPropNameInTable="idOrdenTrabajoColumn" msprop:Generator_UserColumnName="idOrdenTrabajo" type="xs:int" />
+              <xs:element name="observaciones" msprop:Generator_ColumnVarNameInTable="columnobservaciones" msprop:Generator_ColumnPropNameInRow="observaciones" msprop:Generator_ColumnPropNameInTable="observacionesColumn" msprop:Generator_UserColumnName="observaciones" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaEntrada" msprop:Generator_ColumnVarNameInTable="columnfechaEntrada" msprop:Generator_ColumnPropNameInRow="fechaEntrada" msprop:Generator_ColumnPropNameInTable="fechaEntradaColumn" msprop:Generator_UserColumnName="fechaEntrada" type="xs:dateTime" />
+              <xs:element name="fechaSalida" msprop:Generator_ColumnVarNameInTable="columnfechaSalida" msprop:Generator_ColumnPropNameInRow="fechaSalida" msprop:Generator_ColumnPropNameInTable="fechaSalidaColumn" msprop:Generator_UserColumnName="fechaSalida" type="xs:dateTime" />
+              <xs:element name="precioTotal" msprop:Generator_ColumnVarNameInTable="columnprecioTotal" msprop:Generator_ColumnPropNameInRow="precioTotal" msprop:Generator_ColumnPropNameInTable="precioTotalColumn" msprop:Generator_UserColumnName="precioTotal" type="xs:float" />
+              <xs:element name="precioManoObra" msprop:Generator_ColumnVarNameInTable="columnprecioManoObra" msprop:Generator_ColumnPropNameInRow="precioManoObra" msprop:Generator_ColumnPropNameInTable="precioManoObraColumn" msprop:Generator_UserColumnName="precioManoObra" type="xs:float" />
+              <xs:element name="precioRespuesto" msprop:Generator_ColumnVarNameInTable="columnprecioRespuesto" msprop:Generator_ColumnPropNameInRow="precioRespuesto" msprop:Generator_ColumnPropNameInTable="precioRespuestoColumn" msprop:Generator_UserColumnName="precioRespuesto" type="xs:float" />
+              <xs:element name="bechara" msprop:Generator_ColumnVarNameInTable="columnbechara" msprop:Generator_ColumnPropNameInRow="bechara" msprop:Generator_ColumnPropNameInTable="becharaColumn" msprop:Generator_UserColumnName="bechara" type="xs:boolean" />
+              <xs:element name="clientes_idCliente" msprop:Generator_ColumnVarNameInTable="columnclientes_idCliente" msprop:Generator_ColumnPropNameInRow="clientes_idCliente" msprop:Generator_ColumnPropNameInTable="clientes_idClienteColumn" msprop:Generator_UserColumnName="clientes_idCliente" type="xs:int" />
+              <xs:element name="autos_idAuto" msprop:Generator_ColumnVarNameInTable="columnautos_idAuto" msprop:Generator_ColumnPropNameInRow="autos_idAuto" msprop:Generator_ColumnPropNameInTable="autos_idAutoColumn" msprop:Generator_UserColumnName="autos_idAuto" type="xs:int" />
+              <xs:element name="terminado" msprop:Generator_ColumnVarNameInTable="columnterminado" msprop:Generator_ColumnPropNameInRow="terminado" msprop:Generator_ColumnPropNameInTable="terminadoColumn" msprop:Generator_UserColumnName="terminado" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ordentrabajo_has_tipotrabajo" msprop:Generator_TableClassName="ordentrabajo_has_tipotrabajoDataTable" msprop:Generator_TableVarName="tableordentrabajo_has_tipotrabajo" msprop:Generator_TablePropName="ordentrabajo_has_tipotrabajo" msprop:Generator_RowDeletingName="ordentrabajo_has_tipotrabajoRowDeleting" msprop:Generator_RowChangingName="ordentrabajo_has_tipotrabajoRowChanging" msprop:Generator_RowEvHandlerName="ordentrabajo_has_tipotrabajoRowChangeEventHandler" msprop:Generator_RowDeletedName="ordentrabajo_has_tipotrabajoRowDeleted" msprop:Generator_UserTableName="ordentrabajo_has_tipotrabajo" msprop:Generator_RowChangedName="ordentrabajo_has_tipotrabajoRowChanged" msprop:Generator_RowEvArgName="ordentrabajo_has_tipotrabajoRowChangeEvent" msprop:Generator_RowClassName="ordentrabajo_has_tipotrabajoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="ordentrabajo_idOrdenTrabajo" msprop:Generator_ColumnVarNameInTable="columnordentrabajo_idOrdenTrabajo" msprop:Generator_ColumnPropNameInRow="ordentrabajo_idOrdenTrabajo" msprop:Generator_ColumnPropNameInTable="ordentrabajo_idOrdenTrabajoColumn" msprop:Generator_UserColumnName="ordentrabajo_idOrdenTrabajo" type="xs:int" />
+              <xs:element name="tipotrabajo_idTipoTrabajo" msprop:Generator_ColumnVarNameInTable="columntipotrabajo_idTipoTrabajo" msprop:Generator_ColumnPropNameInRow="tipotrabajo_idTipoTrabajo" msprop:Generator_ColumnPropNameInTable="tipotrabajo_idTipoTrabajoColumn" msprop:Generator_UserColumnName="tipotrabajo_idTipoTrabajo" type="xs:int" />
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -816,6 +860,7 @@
         <xs:element name="presupuesto_has_tipotrabajo" msprop:Generator_TableClassName="presupuesto_has_tipotrabajoDataTable" msprop:Generator_TableVarName="tablepresupuesto_has_tipotrabajo" msprop:Generator_TablePropName="presupuesto_has_tipotrabajo" msprop:Generator_RowDeletingName="presupuesto_has_tipotrabajoRowDeleting" msprop:Generator_RowChangingName="presupuesto_has_tipotrabajoRowChanging" msprop:Generator_RowEvHandlerName="presupuesto_has_tipotrabajoRowChangeEventHandler" msprop:Generator_RowDeletedName="presupuesto_has_tipotrabajoRowDeleted" msprop:Generator_UserTableName="presupuesto_has_tipotrabajo" msprop:Generator_RowChangedName="presupuesto_has_tipotrabajoRowChanged" msprop:Generator_RowEvArgName="presupuesto_has_tipotrabajoRowChangeEvent" msprop:Generator_RowClassName="presupuesto_has_tipotrabajoRow">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
               <xs:element name="presupuesto_idPresupuesto" msprop:Generator_ColumnVarNameInTable="columnpresupuesto_idPresupuesto" msprop:Generator_ColumnPropNameInRow="presupuesto_idPresupuesto" msprop:Generator_ColumnPropNameInTable="presupuesto_idPresupuestoColumn" msprop:Generator_UserColumnName="presupuesto_idPresupuesto" type="xs:int" />
               <xs:element name="tipotrabajo_idTipoTrabajo" msprop:Generator_ColumnVarNameInTable="columntipotrabajo_idTipoTrabajo" msprop:Generator_ColumnPropNameInRow="tipotrabajo_idTipoTrabajo" msprop:Generator_ColumnPropNameInTable="tipotrabajo_idTipoTrabajoColumn" msprop:Generator_UserColumnName="tipotrabajo_idTipoTrabajo" type="xs:int" />
             </xs:sequence>
@@ -853,7 +898,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:int" />
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:long" />
               <xs:element name="observaciones" msprop:Generator_ColumnVarNameInTable="columnobservaciones" msprop:Generator_ColumnPropNameInRow="observaciones" msprop:Generator_ColumnPropNameInTable="observacionesColumn" msprop:Generator_UserColumnName="observaciones">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -866,48 +911,23 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ordentrabajo_has_tipotrabajo" msprop:Generator_TableClassName="ordentrabajo_has_tipotrabajoDataTable" msprop:Generator_TableVarName="tableordentrabajo_has_tipotrabajo" msprop:Generator_RowChangedName="ordentrabajo_has_tipotrabajoRowChanged" msprop:Generator_TablePropName="ordentrabajo_has_tipotrabajo" msprop:Generator_RowDeletingName="ordentrabajo_has_tipotrabajoRowDeleting" msprop:Generator_RowChangingName="ordentrabajo_has_tipotrabajoRowChanging" msprop:Generator_RowEvHandlerName="ordentrabajo_has_tipotrabajoRowChangeEventHandler" msprop:Generator_RowDeletedName="ordentrabajo_has_tipotrabajoRowDeleted" msprop:Generator_RowClassName="ordentrabajo_has_tipotrabajoRow" msprop:Generator_UserTableName="ordentrabajo_has_tipotrabajo" msprop:Generator_RowEvArgName="ordentrabajo_has_tipotrabajoRowChangeEvent">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="ordentrabajo_idOrdenTrabajo" msprop:Generator_ColumnVarNameInTable="columnordentrabajo_idOrdenTrabajo" msprop:Generator_ColumnPropNameInRow="ordentrabajo_idOrdenTrabajo" msprop:Generator_ColumnPropNameInTable="ordentrabajo_idOrdenTrabajoColumn" msprop:Generator_UserColumnName="ordentrabajo_idOrdenTrabajo" type="xs:int" />
-              <xs:element name="tipotrabajo_idTipoTrabajo" msprop:Generator_ColumnVarNameInTable="columntipotrabajo_idTipoTrabajo" msprop:Generator_ColumnPropNameInRow="tipotrabajo_idTipoTrabajo" msprop:Generator_ColumnPropNameInTable="tipotrabajo_idTipoTrabajoColumn" msprop:Generator_UserColumnName="tipotrabajo_idTipoTrabajo" type="xs:int" />
-              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:double" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="ordentrabajo" msprop:Generator_TableClassName="ordentrabajoDataTable" msprop:Generator_TableVarName="tableordentrabajo" msprop:Generator_RowChangedName="ordentrabajoRowChanged" msprop:Generator_TablePropName="ordentrabajo" msprop:Generator_RowDeletingName="ordentrabajoRowDeleting" msprop:Generator_RowChangingName="ordentrabajoRowChanging" msprop:Generator_RowEvHandlerName="ordentrabajoRowChangeEventHandler" msprop:Generator_RowDeletedName="ordentrabajoRowDeleted" msprop:Generator_RowClassName="ordentrabajoRow" msprop:Generator_UserTableName="ordentrabajo" msprop:Generator_RowEvArgName="ordentrabajoRowChangeEvent">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="idOrdenTrabajo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidOrdenTrabajo" msprop:Generator_ColumnPropNameInRow="idOrdenTrabajo" msprop:Generator_ColumnPropNameInTable="idOrdenTrabajoColumn" msprop:Generator_UserColumnName="idOrdenTrabajo" type="xs:int" />
-              <xs:element name="observaciones" msprop:Generator_ColumnVarNameInTable="columnobservaciones" msprop:Generator_ColumnPropNameInRow="observaciones" msprop:Generator_ColumnPropNameInTable="observacionesColumn" msprop:Generator_UserColumnName="observaciones" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="fechaEntrada" msprop:Generator_ColumnVarNameInTable="columnfechaEntrada" msprop:Generator_ColumnPropNameInRow="fechaEntrada" msprop:Generator_ColumnPropNameInTable="fechaEntradaColumn" msprop:Generator_UserColumnName="fechaEntrada" type="xs:dateTime" />
-              <xs:element name="fechaSalida" msprop:Generator_ColumnVarNameInTable="columnfechaSalida" msprop:Generator_ColumnPropNameInRow="fechaSalida" msprop:Generator_ColumnPropNameInTable="fechaSalidaColumn" msprop:Generator_UserColumnName="fechaSalida" type="xs:dateTime" />
-              <xs:element name="precioTotal" msprop:Generator_ColumnVarNameInTable="columnprecioTotal" msprop:Generator_ColumnPropNameInRow="precioTotal" msprop:Generator_ColumnPropNameInTable="precioTotalColumn" msprop:Generator_UserColumnName="precioTotal" type="xs:float" />
-              <xs:element name="precioManoObra" msprop:Generator_ColumnVarNameInTable="columnprecioManoObra" msprop:Generator_ColumnPropNameInRow="precioManoObra" msprop:Generator_ColumnPropNameInTable="precioManoObraColumn" msprop:Generator_UserColumnName="precioManoObra" type="xs:float" />
-              <xs:element name="precioRespuesto" msprop:Generator_ColumnVarNameInTable="columnprecioRespuesto" msprop:Generator_ColumnPropNameInRow="precioRespuesto" msprop:Generator_ColumnPropNameInTable="precioRespuestoColumn" msprop:Generator_UserColumnName="precioRespuesto" type="xs:float" />
-              <xs:element name="bechara" msprop:Generator_ColumnVarNameInTable="columnbechara" msprop:Generator_ColumnPropNameInRow="bechara" msprop:Generator_ColumnPropNameInTable="becharaColumn" msprop:Generator_UserColumnName="bechara" type="xs:boolean" />
-              <xs:element name="clientes_idCliente" msprop:Generator_ColumnVarNameInTable="columnclientes_idCliente" msprop:Generator_ColumnPropNameInRow="clientes_idCliente" msprop:Generator_ColumnPropNameInTable="clientes_idClienteColumn" msprop:Generator_UserColumnName="clientes_idCliente" type="xs:int" />
-              <xs:element name="autos_idAuto" msprop:Generator_ColumnVarNameInTable="columnautos_idAuto" msprop:Generator_ColumnPropNameInRow="autos_idAuto" msprop:Generator_ColumnPropNameInTable="autos_idAutoColumn" msprop:Generator_UserColumnName="autos_idAuto" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:autos" />
       <xs:field xpath="mstns:idAuto" />
-      <xs:field xpath="mstns:clientes_idCliente" />
     </xs:unique>
     <xs:unique name="clientes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:clientes" />
       <xs:field xpath="mstns:idCliente" />
+    </xs:unique>
+    <xs:unique name="ordentrabajo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ordentrabajo" />
+      <xs:field xpath="mstns:idOrdenTrabajo" />
+    </xs:unique>
+    <xs:unique name="ordentrabajo_has_tipotrabajo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ordentrabajo_has_tipotrabajo" />
+      <xs:field xpath="mstns:id" />
     </xs:unique>
     <xs:unique name="presupuesto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:presupuesto" />
@@ -915,8 +935,7 @@
     </xs:unique>
     <xs:unique name="presupuesto_has_tipotrabajo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:presupuesto_has_tipotrabajo" />
-      <xs:field xpath="mstns:presupuesto_idPresupuesto" />
-      <xs:field xpath="mstns:tipotrabajo_idTipoTrabajo" />
+      <xs:field xpath="mstns:id" />
     </xs:unique>
     <xs:unique name="tipotrabajo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:tipotrabajo" />
@@ -926,22 +945,15 @@
       <xs:selector xpath=".//mstns:turnos" />
       <xs:field xpath="mstns:idTurno" />
     </xs:unique>
-    <xs:unique name="ordentrabajo_has_tipotrabajo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:ordentrabajo_has_tipotrabajo" />
-      <xs:field xpath="mstns:id" />
-    </xs:unique>
-    <xs:unique name="ordentrabajo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:ordentrabajo" />
-      <xs:field xpath="mstns:idOrdenTrabajo" />
-    </xs:unique>
-    <xs:keyref name="fk_presupuesto_has_tipotrabajo_presupuesto1" refer="presupuesto_Constraint1" msdata:ConstraintOnly="true">
-      <xs:selector xpath=".//mstns:presupuesto_has_tipotrabajo" />
-      <xs:field xpath="mstns:presupuesto_idPresupuesto" />
-    </xs:keyref>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
       <msdata:Relationship name="fk_autos_clientes1" msdata:parent="clientes" msdata:child="autos" msdata:parentkey="idCliente" msdata:childkey="clientes_idCliente" msprop:Generator_UserChildTable="autos" msprop:Generator_ChildPropName="GetautosRows" msprop:Generator_UserRelationName="fk_autos_clientes1" msprop:Generator_RelationVarName="relationfk_autos_clientes1" msprop:Generator_UserParentTable="clientes" msprop:Generator_ParentPropName="clientesRow" />
+      <msdata:Relationship name="fk_ordentrabajo_autos1" msdata:parent="autos" msdata:child="ordentrabajo" msdata:parentkey="idAuto" msdata:childkey="autos_idAuto" msprop:Generator_UserChildTable="ordentrabajo" msprop:Generator_ChildPropName="GetordentrabajoRows" msprop:Generator_UserRelationName="fk_ordentrabajo_autos1" msprop:Generator_ParentPropName="autosRow" msprop:Generator_RelationVarName="relationfk_ordentrabajo_autos1" msprop:Generator_UserParentTable="autos" />
+      <msdata:Relationship name="fk_ordentrabajo_clientes1" msdata:parent="clientes" msdata:child="ordentrabajo" msdata:parentkey="idCliente" msdata:childkey="clientes_idCliente" msprop:Generator_UserChildTable="ordentrabajo" msprop:Generator_ChildPropName="GetordentrabajoRows" msprop:Generator_UserRelationName="fk_ordentrabajo_clientes1" msprop:Generator_ParentPropName="clientesRow" msprop:Generator_RelationVarName="relationfk_ordentrabajo_clientes1" msprop:Generator_UserParentTable="clientes" />
+      <msdata:Relationship name="fk_ordentrabajo_has_tipotrabajo_ordentrabajo1" msdata:parent="ordentrabajo" msdata:child="ordentrabajo_has_tipotrabajo" msdata:parentkey="idOrdenTrabajo" msdata:childkey="ordentrabajo_idOrdenTrabajo" msprop:Generator_UserChildTable="ordentrabajo_has_tipotrabajo" msprop:Generator_ChildPropName="Getordentrabajo_has_tipotrabajoRows" msprop:Generator_UserRelationName="fk_ordentrabajo_has_tipotrabajo_ordentrabajo1" msprop:Generator_ParentPropName="ordentrabajoRow" msprop:Generator_RelationVarName="relationfk_ordentrabajo_has_tipotrabajo_ordentrabajo1" msprop:Generator_UserParentTable="ordentrabajo" />
+      <msdata:Relationship name="fk_ordentrabajo_has_tipotrabajo_tipotrabajo1" msdata:parent="tipotrabajo" msdata:child="ordentrabajo_has_tipotrabajo" msdata:parentkey="idTipoTrabajo" msdata:childkey="tipotrabajo_idTipoTrabajo" msprop:Generator_UserChildTable="ordentrabajo_has_tipotrabajo" msprop:Generator_ChildPropName="Getordentrabajo_has_tipotrabajoRows" msprop:Generator_UserRelationName="fk_ordentrabajo_has_tipotrabajo_tipotrabajo1" msprop:Generator_RelationVarName="relationfk_ordentrabajo_has_tipotrabajo_tipotrabajo1" msprop:Generator_UserParentTable="tipotrabajo" msprop:Generator_ParentPropName="tipotrabajoRow" />
+      <msdata:Relationship name="fk_presupuesto_has_tipotrabajo_presupuesto1" msdata:parent="presupuesto" msdata:child="presupuesto_has_tipotrabajo" msdata:parentkey="idPresupuesto" msdata:childkey="presupuesto_idPresupuesto" msprop:Generator_UserChildTable="presupuesto_has_tipotrabajo" msprop:Generator_ChildPropName="Getpresupuesto_has_tipotrabajoRows" msprop:Generator_UserRelationName="fk_presupuesto_has_tipotrabajo_presupuesto1" msprop:Generator_ParentPropName="presupuestoRow" msprop:Generator_RelationVarName="relationfk_presupuesto_has_tipotrabajo_presupuesto1" msprop:Generator_UserParentTable="presupuesto" />
       <msdata:Relationship name="fk_presupuesto_has_tipotrabajo_tipotrabajo1" msdata:parent="tipotrabajo" msdata:child="presupuesto_has_tipotrabajo" msdata:parentkey="idTipoTrabajo" msdata:childkey="tipotrabajo_idTipoTrabajo" msprop:Generator_UserChildTable="presupuesto_has_tipotrabajo" msprop:Generator_ChildPropName="Getpresupuesto_has_tipotrabajoRows" msprop:Generator_UserRelationName="fk_presupuesto_has_tipotrabajo_tipotrabajo1" msprop:Generator_RelationVarName="relationfk_presupuesto_has_tipotrabajo_tipotrabajo1" msprop:Generator_UserParentTable="tipotrabajo" msprop:Generator_ParentPropName="tipotrabajoRow" />
     </xs:appinfo>
   </xs:annotation>

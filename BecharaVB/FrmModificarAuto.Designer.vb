@@ -26,10 +26,10 @@ Partial Class FrmModificarAuto
         Me.button2 = New System.Windows.Forms.Button()
         Me.button1 = New System.Windows.Forms.Button()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmbTipoCombustible = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCorrea = New System.Windows.Forms.TextBox()
         Me.label13 = New System.Windows.Forms.Label()
-        Me.txtTipoCombustible = New System.Windows.Forms.TextBox()
-        Me.label14 = New System.Windows.Forms.Label()
         Me.txtKilometraje = New System.Windows.Forms.TextBox()
         Me.label11 = New System.Windows.Forms.Label()
         Me.txtAceiteMotor = New System.Windows.Forms.TextBox()
@@ -63,29 +63,36 @@ Partial Class FrmModificarAuto
         'button2
         '
         Me.button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.button2.Location = New System.Drawing.Point(356, 388)
+        Me.button2.Image = Global.BecharaVB.My.Resources.Resources.icono_eliminar
+        Me.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.button2.Location = New System.Drawing.Point(549, 397)
         Me.button2.Name = "button2"
         Me.button2.Size = New System.Drawing.Size(75, 31)
-        Me.button2.TabIndex = 16
+        Me.button2.TabIndex = 1
         Me.button2.Text = "Cancelar"
+        Me.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button2.UseVisualStyleBackColor = False
         '
         'button1
         '
         Me.button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.button1.Location = New System.Drawing.Point(211, 388)
+        Me.button1.Image = Global.BecharaVB.My.Resources.Resources.tilde
+        Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.button1.Location = New System.Drawing.Point(444, 397)
         Me.button1.Name = "button1"
         Me.button1.Size = New System.Drawing.Size(75, 31)
-        Me.button1.TabIndex = 15
+        Me.button1.TabIndex = 0
         Me.button1.Text = "Aceptar"
+        Me.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button1.UseVisualStyleBackColor = False
         '
         'groupBox1
         '
+        Me.groupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.groupBox1.Controls.Add(Me.cmbTipoCombustible)
+        Me.groupBox1.Controls.Add(Me.Label1)
         Me.groupBox1.Controls.Add(Me.txtCorrea)
         Me.groupBox1.Controls.Add(Me.label13)
-        Me.groupBox1.Controls.Add(Me.txtTipoCombustible)
-        Me.groupBox1.Controls.Add(Me.label14)
         Me.groupBox1.Controls.Add(Me.txtKilometraje)
         Me.groupBox1.Controls.Add(Me.label11)
         Me.groupBox1.Controls.Add(Me.txtAceiteMotor)
@@ -108,218 +115,223 @@ Partial Class FrmModificarAuto
         Me.groupBox1.Controls.Add(Me.label5)
         Me.groupBox1.Controls.Add(Me.label4)
         Me.groupBox1.Controls.Add(Me.label3)
+        Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupBox1.Location = New System.Drawing.Point(33, 28)
         Me.groupBox1.Name = "groupBox1"
-        Me.groupBox1.Size = New System.Drawing.Size(591, 328)
+        Me.groupBox1.Size = New System.Drawing.Size(627, 354)
         Me.groupBox1.TabIndex = 14
         Me.groupBox1.TabStop = False
         Me.groupBox1.Text = "Datos Del Auto a Modificar"
         '
+        'cmbTipoCombustible
+        '
+        Me.cmbTipoCombustible.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.cmbTipoCombustible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTipoCombustible.FormattingEnabled = True
+        Me.cmbTipoCombustible.Items.AddRange(New Object() {"Nafta", "Diesel", "GNC"})
+        Me.cmbTipoCombustible.Location = New System.Drawing.Point(451, 280)
+        Me.cmbTipoCombustible.Name = "cmbTipoCombustible"
+        Me.cmbTipoCombustible.Size = New System.Drawing.Size(121, 26)
+        Me.cmbTipoCombustible.TabIndex = 27
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(298, 281)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(124, 18)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "Tipo Combustible"
+        '
         'txtCorrea
         '
-        Me.txtCorrea.Location = New System.Drawing.Point(135, 230)
+        Me.txtCorrea.Location = New System.Drawing.Point(165, 250)
         Me.txtCorrea.Name = "txtCorrea"
-        Me.txtCorrea.Size = New System.Drawing.Size(118, 20)
-        Me.txtCorrea.TabIndex = 28
+        Me.txtCorrea.Size = New System.Drawing.Size(118, 24)
+        Me.txtCorrea.TabIndex = 5
         '
         'label13
         '
         Me.label13.AutoSize = True
-        Me.label13.Location = New System.Drawing.Point(29, 230)
+        Me.label13.Location = New System.Drawing.Point(28, 249)
         Me.label13.Name = "label13"
-        Me.label13.Size = New System.Drawing.Size(96, 13)
+        Me.label13.Size = New System.Drawing.Size(136, 18)
         Me.label13.TabIndex = 26
         Me.label13.Text = "Correa Distribución"
         '
-        'txtTipoCombustible
-        '
-        Me.txtTipoCombustible.Location = New System.Drawing.Point(135, 266)
-        Me.txtTipoCombustible.Name = "txtTipoCombustible"
-        Me.txtTipoCombustible.Size = New System.Drawing.Size(118, 20)
-        Me.txtTipoCombustible.TabIndex = 27
-        '
-        'label14
-        '
-        Me.label14.AutoSize = True
-        Me.label14.Location = New System.Drawing.Point(31, 269)
-        Me.label14.Name = "label14"
-        Me.label14.Size = New System.Drawing.Size(88, 13)
-        Me.label14.TabIndex = 25
-        Me.label14.Text = "Tipo Combustible"
-        '
         'txtKilometraje
         '
-        Me.txtKilometraje.Location = New System.Drawing.Point(422, 217)
+        Me.txtKilometraje.Location = New System.Drawing.Point(451, 237)
         Me.txtKilometraje.Name = "txtKilometraje"
-        Me.txtKilometraje.Size = New System.Drawing.Size(118, 20)
-        Me.txtKilometraje.TabIndex = 24
+        Me.txtKilometraje.Size = New System.Drawing.Size(118, 24)
+        Me.txtKilometraje.TabIndex = 12
         '
         'label11
         '
         Me.label11.AutoSize = True
-        Me.label11.Location = New System.Drawing.Point(318, 224)
+        Me.label11.Location = New System.Drawing.Point(317, 243)
         Me.label11.Name = "label11"
-        Me.label11.Size = New System.Drawing.Size(58, 13)
+        Me.label11.Size = New System.Drawing.Size(82, 18)
         Me.label11.TabIndex = 22
         Me.label11.Text = "Kilometraje"
         '
         'txtAceiteMotor
         '
-        Me.txtAceiteMotor.Location = New System.Drawing.Point(422, 180)
+        Me.txtAceiteMotor.Location = New System.Drawing.Point(451, 200)
         Me.txtAceiteMotor.Name = "txtAceiteMotor"
-        Me.txtAceiteMotor.Size = New System.Drawing.Size(118, 20)
-        Me.txtAceiteMotor.TabIndex = 23
+        Me.txtAceiteMotor.Size = New System.Drawing.Size(118, 24)
+        Me.txtAceiteMotor.TabIndex = 11
         '
         'label12
         '
         Me.label12.AutoSize = True
-        Me.label12.Location = New System.Drawing.Point(318, 183)
+        Me.label12.Location = New System.Drawing.Point(317, 202)
         Me.label12.Name = "label12"
-        Me.label12.Size = New System.Drawing.Size(67, 13)
+        Me.label12.Size = New System.Drawing.Size(92, 18)
         Me.label12.TabIndex = 21
         Me.label12.Text = "Aceite Motor"
         '
         'txtFiltroHabitaculo
         '
-        Me.txtFiltroHabitaculo.Location = New System.Drawing.Point(422, 139)
+        Me.txtFiltroHabitaculo.Location = New System.Drawing.Point(451, 159)
         Me.txtFiltroHabitaculo.Name = "txtFiltroHabitaculo"
-        Me.txtFiltroHabitaculo.Size = New System.Drawing.Size(118, 20)
-        Me.txtFiltroHabitaculo.TabIndex = 20
+        Me.txtFiltroHabitaculo.Size = New System.Drawing.Size(118, 24)
+        Me.txtFiltroHabitaculo.TabIndex = 10
         '
         'label9
         '
         Me.label9.AutoSize = True
-        Me.label9.Location = New System.Drawing.Point(318, 146)
+        Me.label9.Location = New System.Drawing.Point(317, 165)
         Me.label9.Name = "label9"
-        Me.label9.Size = New System.Drawing.Size(83, 13)
+        Me.label9.Size = New System.Drawing.Size(115, 18)
         Me.label9.TabIndex = 18
         Me.label9.Text = "Filtro Habitaculo"
         '
         'txtFiltroCombustible
         '
-        Me.txtFiltroCombustible.Location = New System.Drawing.Point(422, 63)
+        Me.txtFiltroCombustible.Location = New System.Drawing.Point(451, 83)
         Me.txtFiltroCombustible.Name = "txtFiltroCombustible"
-        Me.txtFiltroCombustible.Size = New System.Drawing.Size(118, 20)
-        Me.txtFiltroCombustible.TabIndex = 16
+        Me.txtFiltroCombustible.Size = New System.Drawing.Size(118, 24)
+        Me.txtFiltroCombustible.TabIndex = 8
         '
         'txtFiltroAire
         '
-        Me.txtFiltroAire.Location = New System.Drawing.Point(422, 102)
+        Me.txtFiltroAire.Location = New System.Drawing.Point(451, 122)
         Me.txtFiltroAire.Name = "txtFiltroAire"
-        Me.txtFiltroAire.Size = New System.Drawing.Size(118, 20)
-        Me.txtFiltroAire.TabIndex = 19
+        Me.txtFiltroAire.Size = New System.Drawing.Size(118, 24)
+        Me.txtFiltroAire.TabIndex = 9
         '
         'label10
         '
         Me.label10.AutoSize = True
-        Me.label10.Location = New System.Drawing.Point(318, 105)
+        Me.label10.Location = New System.Drawing.Point(317, 124)
         Me.label10.Name = "label10"
-        Me.label10.Size = New System.Drawing.Size(50, 13)
+        Me.label10.Size = New System.Drawing.Size(70, 18)
         Me.label10.TabIndex = 17
         Me.label10.Text = "Filtro Aire"
         '
         'txtFiltroAceite
         '
-        Me.txtFiltroAceite.Location = New System.Drawing.Point(422, 24)
+        Me.txtFiltroAceite.Location = New System.Drawing.Point(451, 44)
         Me.txtFiltroAceite.Name = "txtFiltroAceite"
-        Me.txtFiltroAceite.Size = New System.Drawing.Size(118, 20)
-        Me.txtFiltroAceite.TabIndex = 15
+        Me.txtFiltroAceite.Size = New System.Drawing.Size(118, 24)
+        Me.txtFiltroAceite.TabIndex = 7
         '
         'txtColor
         '
-        Me.txtColor.Location = New System.Drawing.Point(135, 188)
+        Me.txtColor.Location = New System.Drawing.Point(165, 208)
         Me.txtColor.Name = "txtColor"
-        Me.txtColor.Size = New System.Drawing.Size(118, 20)
-        Me.txtColor.TabIndex = 14
+        Me.txtColor.Size = New System.Drawing.Size(118, 24)
+        Me.txtColor.TabIndex = 4
         '
         'label6
         '
         Me.label6.AutoSize = True
-        Me.label6.Location = New System.Drawing.Point(31, 191)
+        Me.label6.Location = New System.Drawing.Point(30, 210)
         Me.label6.Name = "label6"
-        Me.label6.Size = New System.Drawing.Size(31, 13)
+        Me.label6.Size = New System.Drawing.Size(45, 18)
         Me.label6.TabIndex = 13
         Me.label6.Text = "Color"
         '
         'label7
         '
         Me.label7.AutoSize = True
-        Me.label7.Location = New System.Drawing.Point(318, 67)
+        Me.label7.Location = New System.Drawing.Point(317, 86)
         Me.label7.Name = "label7"
-        Me.label7.Size = New System.Drawing.Size(89, 13)
+        Me.label7.Size = New System.Drawing.Size(128, 18)
         Me.label7.TabIndex = 12
         Me.label7.Text = "Filtro Combustible"
         '
         'label8
         '
         Me.label8.AutoSize = True
-        Me.label8.Location = New System.Drawing.Point(318, 32)
+        Me.label8.Location = New System.Drawing.Point(317, 51)
         Me.label8.Name = "label8"
-        Me.label8.Size = New System.Drawing.Size(62, 13)
+        Me.label8.Size = New System.Drawing.Size(85, 18)
         Me.label8.TabIndex = 11
         Me.label8.Text = "Filtro Aceite"
         '
         'txtMarca
         '
-        Me.txtMarca.Location = New System.Drawing.Point(135, 28)
+        Me.txtMarca.Location = New System.Drawing.Point(165, 48)
         Me.txtMarca.Name = "txtMarca"
-        Me.txtMarca.Size = New System.Drawing.Size(118, 20)
-        Me.txtMarca.TabIndex = 9
+        Me.txtMarca.Size = New System.Drawing.Size(118, 24)
+        Me.txtMarca.TabIndex = 0
         '
         'txtPatente
         '
-        Me.txtPatente.Location = New System.Drawing.Point(135, 148)
+        Me.txtPatente.Location = New System.Drawing.Point(165, 168)
         Me.txtPatente.Name = "txtPatente"
-        Me.txtPatente.Size = New System.Drawing.Size(118, 20)
-        Me.txtPatente.TabIndex = 8
+        Me.txtPatente.Size = New System.Drawing.Size(118, 24)
+        Me.txtPatente.TabIndex = 3
         '
         'txtAnio
         '
-        Me.txtAnio.Location = New System.Drawing.Point(135, 107)
+        Me.txtAnio.Location = New System.Drawing.Point(165, 127)
         Me.txtAnio.Name = "txtAnio"
-        Me.txtAnio.Size = New System.Drawing.Size(118, 20)
-        Me.txtAnio.TabIndex = 7
+        Me.txtAnio.Size = New System.Drawing.Size(118, 24)
+        Me.txtAnio.TabIndex = 2
         '
         'txtModelo
         '
-        Me.txtModelo.Location = New System.Drawing.Point(135, 67)
+        Me.txtModelo.Location = New System.Drawing.Point(165, 87)
         Me.txtModelo.Name = "txtModelo"
-        Me.txtModelo.Size = New System.Drawing.Size(118, 20)
-        Me.txtModelo.TabIndex = 6
+        Me.txtModelo.Size = New System.Drawing.Size(118, 24)
+        Me.txtModelo.TabIndex = 1
         '
         'label2
         '
         Me.label2.AutoSize = True
-        Me.label2.Location = New System.Drawing.Point(31, 31)
+        Me.label2.Location = New System.Drawing.Point(30, 50)
         Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(37, 13)
+        Me.label2.Size = New System.Drawing.Size(50, 18)
         Me.label2.TabIndex = 1
         Me.label2.Text = "Marca"
         '
         'label5
         '
         Me.label5.AutoSize = True
-        Me.label5.Location = New System.Drawing.Point(31, 70)
+        Me.label5.Location = New System.Drawing.Point(30, 89)
         Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(42, 13)
+        Me.label5.Size = New System.Drawing.Size(58, 18)
         Me.label5.TabIndex = 4
         Me.label5.Text = "Modelo"
         '
         'label4
         '
         Me.label4.AutoSize = True
-        Me.label4.Location = New System.Drawing.Point(29, 151)
+        Me.label4.Location = New System.Drawing.Point(28, 170)
         Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(44, 13)
+        Me.label4.Size = New System.Drawing.Size(58, 18)
         Me.label4.TabIndex = 3
         Me.label4.Text = "Patente"
         '
         'label3
         '
         Me.label3.AutoSize = True
-        Me.label3.Location = New System.Drawing.Point(31, 110)
+        Me.label3.Location = New System.Drawing.Point(30, 129)
         Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(26, 13)
+        Me.label3.Size = New System.Drawing.Size(34, 18)
         Me.label3.TabIndex = 2
         Me.label3.Text = "Año"
         '
@@ -341,12 +353,16 @@ Partial Class FrmModificarAuto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(666, 438)
+        Me.BackgroundImage = Global.BecharaVB.My.Resources.Resources.simple_1440_1024x640
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(697, 459)
         Me.Controls.Add(Me.button2)
         Me.Controls.Add(Me.button1)
         Me.Controls.Add(Me.groupBox1)
+        Me.DoubleBuffered = True
         Me.Name = "FrmModificarAuto"
-        Me.Text = "FrmModificarAuto"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "MODIFICAR AUTO"
         Me.groupBox1.ResumeLayout(False)
         Me.groupBox1.PerformLayout()
         CType(Me.BecharaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -360,8 +376,6 @@ Partial Class FrmModificarAuto
     Private WithEvents groupBox1 As GroupBox
     Public WithEvents txtCorrea As TextBox
     Private WithEvents label13 As Label
-    Public WithEvents txtTipoCombustible As TextBox
-    Private WithEvents label14 As Label
     Public WithEvents txtKilometraje As TextBox
     Private WithEvents label11 As Label
     Public WithEvents txtAceiteMotor As TextBox
@@ -387,4 +401,6 @@ Partial Class FrmModificarAuto
     Friend WithEvents BecharaDataSet As becharaDataSet
     Friend WithEvents ClientesBindingSource As BindingSource
     Friend WithEvents ClientesTableAdapter As becharaDataSetTableAdapters.clientesTableAdapter
+    Friend WithEvents cmbTipoCombustible As ComboBox
+    Private WithEvents Label1 As Label
 End Class

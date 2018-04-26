@@ -6,6 +6,8 @@ Public Class principal
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim conexion As New MySqlConnection("data source =localhost;user id=root; password='';database ='bechara'")
+        cmbFiltroCliente.Select()
+        cmbFiltroCliente.SelectedIndex = 1
     End Sub
 
 
@@ -26,8 +28,9 @@ Public Class principal
             nuevocliente.EndEdit()
             ClientesTableAdapter.Update(BecharaDataSet)
             ClientesTableAdapter.Fill(BecharaDataSet.clientes)
-            FrmAgregarCliente.Dispose()
+
         End If
+        FrmAgregarCliente.Dispose()
     End Sub
 
     Private Sub principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -35,7 +38,7 @@ Public Class principal
         Me.ClientesTableAdapter.Fill(Me.BecharaDataSet.clientes)
         Me.AutosTableAdapter.Fill(Me.BecharaDataSet.autos)
 
-
+        cmbFiltroCliente.SelectedIndex = 1
     End Sub
 
     Private Sub button3_Click(sender As Object, e As EventArgs) Handles button3.Click
@@ -46,26 +49,27 @@ Public Class principal
             Dim autoActual As DataRowView = AutosBindingSource.Current
             Dim result As Integer = MessageBox.Show("¿Esta seguro de eliminar al cliente " + clienteActual("nombre") + " " + clienteActual("apellido") + " ?. Se eliminaràn todos sus autos", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
             If result = DialogResult.Yes Then
+                Dim contrasenia As New FrmContrasenia
+                If (DialogResult.OK = FrmContrasenia.ShowDialog()) Then
 
-
-                clienteActual.Delete()
-                ' ClientesTableAdapter.Delete(clienteActual("idCliente"), clienteActual("nombre"), clienteActual("apellido"), clienteActual("direccion"), clienteActual("telefono"), clienteActual("fechaNacimiento"), clienteActual("dni"))
-                ClientesTableAdapter.Update(BecharaDataSet.clientes)
-                ClientesTableAdapter.Fill(BecharaDataSet.clientes)
-                AutosTableAdapter.Update(BecharaDataSet.autos)
-                AutosTableAdapter.Fill(BecharaDataSet.autos)
-            ElseIf result = DialogResult.No Then
-
+                    clienteActual.Delete()
+                    ' ClientesTableAdapter.Delete(clienteActual("idCliente"), clienteActual("nombre"), clienteActual("apellido"), clienteActual("direccion"), clienteActual("telefono"), clienteActual("fechaNacimiento"), clienteActual("dni"))
+                    ClientesTableAdapter.Update(BecharaDataSet.clientes)
+                    ClientesTableAdapter.Fill(BecharaDataSet.clientes)
+                    AutosTableAdapter.Update(BecharaDataSet.autos)
+                    AutosTableAdapter.Fill(BecharaDataSet.autos)
+                ElseIf result = DialogResult.No Then
+                End If
             End If
 
 
         Catch ex As NullReferenceException
-            MessageBox.Show("No se ha seleccionado ningun cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No hay regístros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
 
 
 
-
+        FrmContrasenia.Dispose()
 
 
 
@@ -101,28 +105,28 @@ Public Class principal
                 ClientesTableAdapter.Fill(BecharaDataSet.clientes)
             End If
         Catch ex As NullReferenceException
-            MessageBox.Show("Error , no hay registros para modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("No hay regístros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
     End Sub
 
     Private Sub autosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles autosToolStripMenuItem.Click
         Dim frmAuto As New FrmAuto()
-        frmAuto.Show()
+        frmAuto.ShowDialog()
     End Sub
 
     Private Sub ordenDeTrabajoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ordenDeTrabajoToolStripMenuItem.Click
         Dim frmTipoTrabajo As New FrmTipoDeTrabajo()
-        frmTipoTrabajo.Show()
+        frmTipoTrabajo.ShowDialog()
     End Sub
 
     Private Sub tiposDeTrabajoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tiposDeTrabajoToolStripMenuItem.Click
         Dim frmTrabajo As New FrmTrabajos()
-        frmTrabajo.Show()
+        frmTrabajo.ShowDialog()
     End Sub
 
     Private Sub turnosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles turnosToolStripMenuItem.Click
-        Dim frmTurno As New FrmTurnos()
-        frmTurno.Show()
+        Dim frmTurno As New TURNOS()
+        frmTurno.ShowDialog()
     End Sub
 
     Private Sub textBox1_TextChanged(sender As Object, e As EventArgs) Handles txtBuscaCliente.TextChanged
@@ -153,6 +157,43 @@ Public Class principal
     End Sub
 
 
+
+    Private Sub presupuestosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles presupuestosToolStripMenuItem.Click
+        Dim frmPresupuesto As New FrmPresupuestos()
+        frmPresupuesto.ShowDialog()
+    End Sub
+
+    Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
+
+        Dim modifiers As Keys = (keyData And Keys.Modifiers)
+        Dim key As Keys = (keyData And Keys.KeyCode)
+        If (modifiers.Equals(Keys.Control)) AndAlso key.Equals(Keys.A) Then
+            FrmAgregarCliente.ShowDialog()
+        End If
+        If (modifiers.Equals(Keys.Control)) AndAlso key.Equals(Keys.M) Then
+            FrmModificarCliente.ShowDialog()
+        End If
+        If (modifiers.Equals(Keys.Control)) AndAlso key.Equals(Keys.E) Then
+            button3.PerformClick()
+            txtBuscaCliente.Clear()
+        End If
+
+        Return MyBase.ProcessCmdKey(msg, keyData)
+    End Function
+
+
+
+    Private Sub TiposTrabajos_Click(sender As Object, e As EventArgs) Handles TiposTrabajos.Click
+        FrmReporteTipoTrabajo.ShowDialog()
+    End Sub
+
+    Private Sub cmbFiltroCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFiltroCliente.SelectedIndexChanged
+        txtBuscaCliente.Focus()
+    End Sub
+
+    Private Sub Trabajos_Click(sender As Object, e As EventArgs) Handles Trabajos.Click
+        FrmReporteTrabajos.ShowDialog()
+    End Sub
 End Class
 
 

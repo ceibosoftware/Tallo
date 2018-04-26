@@ -73,6 +73,16 @@ Namespace My
                 Return CType(Me("becharaConnectionString1"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=bechara")>  _
+        Public ReadOnly Property becharaConnectionString2() As String
+            Get
+                Return CType(Me("becharaConnectionString2"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

@@ -31,51 +31,62 @@ Partial Class FrmAgregarTipotrabajo
         'button2
         '
         Me.button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.button2.Image = Global.BecharaVB.My.Resources.Resources.icono_eliminar
+        Me.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.button2.Location = New System.Drawing.Point(174, 75)
         Me.button2.Name = "button2"
         Me.button2.Size = New System.Drawing.Size(75, 31)
-        Me.button2.TabIndex = 16
+        Me.button2.TabIndex = 2
         Me.button2.Text = "Cancelar"
+        Me.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button2.UseVisualStyleBackColor = False
         '
         'button1
         '
         Me.button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.button1.Image = Global.BecharaVB.My.Resources.Resources.tilde
+        Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.button1.Location = New System.Drawing.Point(75, 75)
         Me.button1.Name = "button1"
         Me.button1.Size = New System.Drawing.Size(75, 31)
-        Me.button1.TabIndex = 15
+        Me.button1.TabIndex = 1
         Me.button1.Text = "Aceptar"
+        Me.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button1.UseVisualStyleBackColor = False
         '
         'label1
         '
         Me.label1.AutoSize = True
+        Me.label1.BackColor = System.Drawing.Color.Transparent
+        Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.Location = New System.Drawing.Point(22, 33)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(79, 13)
+        Me.label1.Size = New System.Drawing.Size(111, 18)
         Me.label1.TabIndex = 13
         Me.label1.Text = "Nombre trabajo"
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(123, 30)
+        Me.txtNombre.Location = New System.Drawing.Point(139, 34)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(140, 20)
-        Me.txtNombre.TabIndex = 17
+        Me.txtNombre.TabIndex = 0
         '
         'FrmAgregarTipotrabajo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 134)
+        Me.BackgroundImage = Global.BecharaVB.My.Resources.Resources.simple_1440_1024x640
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(322, 134)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.button2)
         Me.Controls.Add(Me.button1)
         Me.Controls.Add(Me.label1)
+        Me.DoubleBuffered = True
         Me.Name = "FrmAgregarTipotrabajo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmAgregarTipotrabajo"
+        Me.Text = "kk"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

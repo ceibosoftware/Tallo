@@ -23,12 +23,14 @@ Public Class FrmNuevaOrdenDeTrabajo
         If (Valida()) Then
             DialogResult = DialogResult.OK
         Else
-            MessageBox.Show("No se pueden dejar en blanco los campos de precio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("No se pueden dejar en blanco los campos de precio o no existen tipos de trabajo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 
 
     Private Sub FrmNuevaOrdenDeTrabajo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'BecharaDataSet.tipotrabajo' table. You can move, or remove it, as needed.
+        Me.TipotrabajoTableAdapter.Fill(Me.BecharaDataSet.tipotrabajo)
         'TODO: This line of code loads data into the 'BecharaDataSet.tipotrabajo' table. You can move, or remove it, as needed.
         Me.TipotrabajoTableAdapter.Fill(Me.BecharaDataSet.tipotrabajo)
         Dim conexion As New MySqlConnection("data source =localhost;user id=root; password='';database ='bechara'")
@@ -39,13 +41,13 @@ Public Class FrmNuevaOrdenDeTrabajo
 
         txtRepuestos.Text = 0.ToString
 
-        sql = "select * from clientes"
+        sql = "select distinct clientes.apellido , clientes.idCliente from   clientes ,autos where  clientes.idCliente = autos.clientes_idCliente "
         adaptador = New MySqlDataAdapter(sql, conexion)
         clientes = New DataSet
         clientes.Tables.Add("clientes")
         adaptador.Fill(clientes.Tables("clientes"))
-        ltsClientes.DataSource = ClientesBindingSource
-        ltsClientes.DisplayMember = "nombre"
+        ltsClientes.DataSource = clientes.Tables("clientes")
+        ltsClientes.DisplayMember = "apellido"
         ltsClientes.ValueMember = "idCliente"
 
 
@@ -60,9 +62,11 @@ Public Class FrmNuevaOrdenDeTrabajo
         adaptador.SelectCommand.Parameters.AddWithValue("id", ltsClientes.SelectedValue)
         autos.Tables.Add("autos")
         adaptador.Fill(autos.Tables("autos"))
+
         ComboBox1.DataSource = autos.Tables("autos")
-        ComboBox1.DisplayMember = "modelo"
-        ComboBox1.ValueMember = "idAuto"
+            ComboBox1.DisplayMember = "modelo"
+            ComboBox1.ValueMember = "idAuto"
+
     End Sub
 
     Private Sub crearComboYtext()
@@ -75,6 +79,7 @@ Public Class FrmNuevaOrdenDeTrabajo
             combo(contador).Size() = New Size(121, 21)
             combo(contador).Visible = True
             combo(contador).Name = "cmbTipotrabajo" & contador
+            combo(contador).DropDownStyle = ComboBoxStyle.DropDownList
             tipotrabajo.Controls.Add(combo(contador))
             textbox(contador) = New TextBox
             textbox(contador).Location = New Point(txtPrecio.Left, posicionY)
@@ -109,7 +114,7 @@ Public Class FrmNuevaOrdenDeTrabajo
         contador += 1
     End Sub
 
-    Private Sub btnElimTipo_Click(sender As Object, e As EventArgs) Handles btnElimTipo.Click
+    Private Sub btnElimTipo_Click(sender As Object, e As EventArgs) Handles btnElimtipo.Click
         Try
             tipotrabajo.Controls.Remove(textbox(contador - 1))
             tipotrabajo.Controls.Remove(combo(contador - 1))
@@ -187,16 +192,22 @@ Public Class FrmNuevaOrdenDeTrabajo
     End Sub
 
     Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
-        Dim cadena As String
-        cadena = txtBuscar.Text.Trim
-        If cadena.Length > 0 Then
+        Dim conexion As MySqlConnection = New MySqlConnection
+        Dim comando As MySqlCommand = New MySqlCommand
+        comando.Connection = conexion
+        comando.CommandText = "select distinct clientes.apellido , clientes.idCliente from   clientes ,autos where  clientes.idCliente = autos.clientes_idCliente and clientes.apellido Like '%' @apellido '%' "
+        Try
+            conexion.ConnectionString = "data source =localhost;user id=root; password='';database ='bechara'"
+        Catch ex As Exception
+
+        End Try
 
 
-            ClientesBindingSource.Filter = "nombre like '*" & cadena & "*' "
-
-        Else
-            ClientesBindingSource.Filter = ""
-        End If
+        Dim dt As DataTable = New DataTable
+        Dim da As MySqlDataAdapter = New MySqlDataAdapter(comando)
+        da.SelectCommand.Parameters.AddWithValue("apellido", txtBuscar.Text)
+        da.Fill(dt)
+        ltsClientes.DataSource = dt
     End Sub
 
     Private Sub chkRepuestos_CheckedChanged(sender As Object, e As EventArgs) Handles chkRepuestos.CheckedChanged
@@ -265,10 +276,31 @@ Public Class FrmNuevaOrdenDeTrabajo
 
             End If
         Next
+        If cmbTipotrabajo.Text = "" Then
+            Return False
+        End If
         Return True
 
 
     End Function
+
+
+
+    Private Sub txtPrecio_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles txtPrecio.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub button2_Click(sender As Object, e As EventArgs) Handles button2.Click
+        Me.Close()
+    End Sub
 
 
 End Class

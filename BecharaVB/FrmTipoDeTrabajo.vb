@@ -4,7 +4,8 @@
     Private Sub FrmTipoDeTrabajo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BecharaDataSet.tipotrabajo' table. You can move, or remove it, as needed.
         Me.TipotrabajoTableAdapter.Fill(Me.BecharaDataSet.tipotrabajo)
-
+        textBox2.Select()
+        comboBox2.SelectedIndex = 0
     End Sub
     Private Sub button1_Click(sender As Object, e As EventArgs) Handles button1.Click
         If (DialogResult.OK = FrmAgregarTipotrabajo.ShowDialog()) Then
@@ -26,13 +27,15 @@
         Dim tipoTrabajo As DataRowView = TipotrabajoBindingSource.Current
 
         Try
-            FrmModificarTipoTrabajo.txtNombre.Text = tipoTrabajo("nombre")
+            FrmModificarTipoTrabajo.txtNombretrabajo.Text = tipoTrabajo("nombre")
 
             If (DialogResult.OK = FrmModificarTipoTrabajo.ShowDialog()) Then
-                tipoTrabajo("nombre") = FrmModificarTipoTrabajo.txtNombre.Text
+                tipoTrabajo("nombre") = FrmModificarTipoTrabajo.txtNombretrabajo.Text
                 tipoTrabajo.EndEdit()
                 TipotrabajoTableAdapter.Update(BecharaDataSet)
                 TipotrabajoTableAdapter.Fill(BecharaDataSet.tipotrabajo)
+                FrmModificarTipoTrabajo.Dispose()
+            Else
                 FrmModificarTipoTrabajo.Dispose()
             End If
         Catch ex As Exception
@@ -43,16 +46,26 @@
 
     Private Sub button3_Click(sender As Object, e As EventArgs) Handles button3.Click
         Dim trabajoActual As DataRowView = TipotrabajoBindingSource.Current
+        Console.WriteLine("current " + TipotrabajoBindingSource.Current.ToString)
         Dim result As Integer = MessageBox.Show("¿Esta seguro de eliminar  trabajo " + trabajoActual("nombre"), "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
 
         Try
-            If result = DialogResult.Yes Then
-                trabajoActual.Delete()
-                TipotrabajoTableAdapter.Update(BecharaDataSet)
-                TipotrabajoTableAdapter.Fill(BecharaDataSet.tipotrabajo)
+            Dim contrasenia As New FrmContrasenia
+            If (DialogResult.OK = FrmContrasenia.ShowDialog()) Then
+                If result = DialogResult.Yes Then
+                    trabajoActual.Delete()
+                    TipotrabajoTableAdapter.Update(BecharaDataSet)
+                    TipotrabajoTableAdapter.Fill(BecharaDataSet.tipotrabajo)
+
+                End If
+
+
+
             End If
         Catch ex As Exception
-
+            MessageBox.Show("No se puede eliminar, existen trabajos realizados con este tipo de trabajo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TipotrabajoTableAdapter.Fill(BecharaDataSet.tipotrabajo)
         End Try
+        FrmContrasenia.Dispose()
     End Sub
 End Class
