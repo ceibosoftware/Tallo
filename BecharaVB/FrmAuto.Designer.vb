@@ -36,6 +36,16 @@ Partial Class FrmAuto
         Me.txtBuscarAuto = New System.Windows.Forms.TextBox()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
         Me.AutosDataGridView = New System.Windows.Forms.DataGridView()
+        Me.AutosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BecharaDataSet = New BecharaVB.becharaDataSet()
+        Me.AutosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New BecharaVB.DataSet1()
+        Me.AutosTableAdapter = New BecharaVB.becharaDataSetTableAdapters.autosTableAdapter()
+        Me.TableAdapterManager = New BecharaVB.becharaDataSetTableAdapters.TableAdapterManager()
+        Me.ClientesTableAdapter = New BecharaVB.becharaDataSetTableAdapters.clientesTableAdapter()
+        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AutosTableAdapter1 = New BecharaVB.DataSet1TableAdapters.autosTableAdapter()
+        Me.TableAdapterManager1 = New BecharaVB.DataSet1TableAdapters.TableAdapterManager()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,16 +60,6 @@ Partial Class FrmAuto
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.idAuto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AutosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BecharaDataSet = New BecharaVB.becharaDataSet()
-        Me.AutosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet1 = New BecharaVB.DataSet1()
-        Me.AutosTableAdapter = New BecharaVB.becharaDataSetTableAdapters.autosTableAdapter()
-        Me.TableAdapterManager = New BecharaVB.becharaDataSetTableAdapters.TableAdapterManager()
-        Me.ClientesTableAdapter = New BecharaVB.becharaDataSetTableAdapters.clientesTableAdapter()
-        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AutosTableAdapter1 = New BecharaVB.DataSet1TableAdapters.autosTableAdapter()
-        Me.TableAdapterManager1 = New BecharaVB.DataSet1TableAdapters.TableAdapterManager()
         Me.groupBox1.SuspendLayout()
         CType(Me.AutosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AutosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -209,105 +209,6 @@ Partial Class FrmAuto
         Me.AutosDataGridView.Size = New System.Drawing.Size(840, 260)
         Me.AutosDataGridView.TabIndex = 0
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "marca"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "marca"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "modelo"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "modelo"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "patente"
-        Me.DataGridViewTextBoxColumn13.HeaderText = "patente"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "anio"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "año"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "color"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "color"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "filtroAceite"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "filtro aceite"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "filtroAire"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "filtro aire"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "filtroCombustible"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "filtro combustible"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "filtroHabitaculo"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "filtro habitaculo"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "aceiteMotor"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "aceite motor"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "kilometraje"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "kilometraje"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "distribucion"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "correa distribución"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "tipoCombustible"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "tipo de combustible"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'idAuto
-        '
-        Me.idAuto.DataPropertyName = "idAuto"
-        Me.idAuto.HeaderText = "idAuto"
-        Me.idAuto.Name = "idAuto"
-        Me.idAuto.ReadOnly = True
-        Me.idAuto.Visible = False
-        '
         'AutosBindingSource
         '
         Me.AutosBindingSource.DataMember = "autos"
@@ -364,6 +265,105 @@ Partial Class FrmAuto
         Me.TableAdapterManager1.clientesTableAdapter = Nothing
         Me.TableAdapterManager1.Connection = Nothing
         Me.TableAdapterManager1.UpdateOrder = BecharaVB.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "marca"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Marca"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "modelo"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Modelo"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "patente"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "Patente"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "anio"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Año"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "color"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Color"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "filtroAceite"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Filtro de aceite"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "filtroAire"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Filtro de aire"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "filtroCombustible"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Filtro de combustible"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "filtroHabitaculo"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Filtro de habitaculo"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "aceiteMotor"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Aceite motor"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "kilometraje"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Kilometraje"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "distribucion"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Correa de distribución"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "tipoCombustible"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Tipo de combustible"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        '
+        'idAuto
+        '
+        Me.idAuto.DataPropertyName = "idAuto"
+        Me.idAuto.HeaderText = "idAuto"
+        Me.idAuto.Name = "idAuto"
+        Me.idAuto.ReadOnly = True
+        Me.idAuto.Visible = False
         '
         'FrmAuto
         '

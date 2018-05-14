@@ -47,12 +47,6 @@ Partial Class principal
         Me.button1 = New System.Windows.Forms.Button()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
         Me.clientesDataGridView = New System.Windows.Forms.DataGridView()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaNacimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DniDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BecharaDataSet = New BecharaVB.becharaDataSet()
         Me.ClientesTableAdapter = New BecharaVB.becharaDataSetTableAdapters.clientesTableAdapter()
@@ -60,6 +54,12 @@ Partial Class principal
         Me.AutosTableAdapter = New BecharaVB.becharaDataSetTableAdapters.autosTableAdapter()
         Me.AutosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.label1 = New System.Windows.Forms.Label()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaNacimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DniDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.menuStrip1.SuspendLayout()
         Me.groupBox1.SuspendLayout()
         CType(Me.clientesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -148,7 +148,7 @@ Partial Class principal
         Me.Trabajos.BackColor = System.Drawing.Color.OliveDrab
         Me.Trabajos.ForeColor = System.Drawing.Color.White
         Me.Trabajos.Name = "Trabajos"
-        Me.Trabajos.Size = New System.Drawing.Size(180, 22)
+        Me.Trabajos.Size = New System.Drawing.Size(154, 22)
         Me.Trabajos.Text = "Trabajos"
         '
         'TiposTrabajos
@@ -156,7 +156,7 @@ Partial Class principal
         Me.TiposTrabajos.BackColor = System.Drawing.Color.OliveDrab
         Me.TiposTrabajos.ForeColor = System.Drawing.Color.White
         Me.TiposTrabajos.Name = "TiposTrabajos"
-        Me.TiposTrabajos.Size = New System.Drawing.Size(180, 22)
+        Me.TiposTrabajos.Size = New System.Drawing.Size(154, 22)
         Me.TiposTrabajos.Text = "Tipos trabajos"
         '
         'cmbFiltroCliente
@@ -298,53 +298,6 @@ Partial Class principal
         Me.clientesDataGridView.Size = New System.Drawing.Size(714, 231)
         Me.clientesDataGridView.TabIndex = 0
         '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombreDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'ApellidoDataGridViewTextBoxColumn
-        '
-        Me.ApellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido"
-        Me.ApellidoDataGridViewTextBoxColumn.HeaderText = "apellido"
-        Me.ApellidoDataGridViewTextBoxColumn.Name = "ApellidoDataGridViewTextBoxColumn"
-        Me.ApellidoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ApellidoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DireccionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DireccionDataGridViewTextBoxColumn.Width = 170
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TelefonoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        '
-        'FechaNacimientoDataGridViewTextBoxColumn
-        '
-        Me.FechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "fechaNacimiento"
-        Me.FechaNacimientoDataGridViewTextBoxColumn.HeaderText = "fecha nacimiento"
-        Me.FechaNacimientoDataGridViewTextBoxColumn.Name = "FechaNacimientoDataGridViewTextBoxColumn"
-        Me.FechaNacimientoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DniDataGridViewTextBoxColumn
-        '
-        Me.DniDataGridViewTextBoxColumn.DataPropertyName = "dni"
-        Me.DniDataGridViewTextBoxColumn.HeaderText = "dni"
-        Me.DniDataGridViewTextBoxColumn.Name = "DniDataGridViewTextBoxColumn"
-        Me.DniDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'ClientesBindingSource
         '
         Me.ClientesBindingSource.DataMember = "clientes"
@@ -395,6 +348,53 @@ Partial Class principal
         Me.label1.TabIndex = 19
         Me.label1.Text = "buscar       "
         Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'ApellidoDataGridViewTextBoxColumn
+        '
+        Me.ApellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido"
+        Me.ApellidoDataGridViewTextBoxColumn.HeaderText = "Apellido"
+        Me.ApellidoDataGridViewTextBoxColumn.Name = "ApellidoDataGridViewTextBoxColumn"
+        Me.ApellidoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ApellidoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Dirección"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DireccionDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DireccionDataGridViewTextBoxColumn.Width = 170
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "Teléfono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TelefonoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'FechaNacimientoDataGridViewTextBoxColumn
+        '
+        Me.FechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "fechaNacimiento"
+        Me.FechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha de Nacimiento"
+        Me.FechaNacimientoDataGridViewTextBoxColumn.Name = "FechaNacimientoDataGridViewTextBoxColumn"
+        Me.FechaNacimientoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DniDataGridViewTextBoxColumn
+        '
+        Me.DniDataGridViewTextBoxColumn.DataPropertyName = "dni"
+        Me.DniDataGridViewTextBoxColumn.HeaderText = "DNI"
+        Me.DniDataGridViewTextBoxColumn.Name = "DniDataGridViewTextBoxColumn"
+        Me.DniDataGridViewTextBoxColumn.ReadOnly = True
         '
         'principal
         '

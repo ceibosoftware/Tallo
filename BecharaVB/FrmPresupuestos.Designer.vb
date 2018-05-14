@@ -30,6 +30,15 @@ Partial Class FrmPresupuestos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtObservacion = New System.Windows.Forms.RichTextBox()
         Me.PresupuestoDataGridView = New System.Windows.Forms.DataGridView()
+        Me.PresupuestoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BecharaDataSet = New BecharaVB.becharaDataSet()
+        Me.button3 = New System.Windows.Forms.Button()
+        Me.button2 = New System.Windows.Forms.Button()
+        Me.button1 = New System.Windows.Forms.Button()
+        Me.PresupuestoTableAdapter = New BecharaVB.becharaDataSetTableAdapters.presupuestoTableAdapter()
+        Me.TableAdapterManager = New BecharaVB.becharaDataSetTableAdapters.TableAdapterManager()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.BecharaDataSet1 = New BecharaVB.becharaDataSet()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,15 +52,6 @@ Partial Class FrmPresupuestos
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PresupuestoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BecharaDataSet = New BecharaVB.becharaDataSet()
-        Me.button3 = New System.Windows.Forms.Button()
-        Me.button2 = New System.Windows.Forms.Button()
-        Me.button1 = New System.Windows.Forms.Button()
-        Me.PresupuestoTableAdapter = New BecharaVB.becharaDataSetTableAdapters.presupuestoTableAdapter()
-        Me.TableAdapterManager = New BecharaVB.becharaDataSetTableAdapters.TableAdapterManager()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.BecharaDataSet1 = New BecharaVB.becharaDataSet()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PresupuestoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PresupuestoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,98 +118,6 @@ Partial Class FrmPresupuestos
         Me.PresupuestoDataGridView.ReadOnly = True
         Me.PresupuestoDataGridView.Size = New System.Drawing.Size(1018, 253)
         Me.PresupuestoDataGridView.TabIndex = 0
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "apellido"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "apellido"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "direccion"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "direccion"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "modelo"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "modelo"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "marca"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "marca"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "patente"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "patente"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "kilometraje"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "kilometraje"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "combustible"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "combustible"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "precioRespuesto"
-        Me.DataGridViewTextBoxColumn14.HeaderText = "precio de respuestos $"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "precioManoObra"
-        Me.DataGridViewTextBoxColumn13.HeaderText = "precio mano de obra $"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "precioTotal"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "precio total $"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "observaciones"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "observaciones"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Visible = False
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "fechaCaducidad"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "fecha de caducidad"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
         '
         'PresupuestoBindingSource
         '
@@ -298,6 +206,98 @@ Partial Class FrmPresupuestos
         '
         Me.BecharaDataSet1.DataSetName = "becharaDataSet"
         Me.BecharaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "apellido"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Apellido"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "direccion"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Dirección"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "modelo"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Modelo"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "marca"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Marca"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "patente"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Patente"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "kilometraje"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Kilometraje"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "combustible"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Combustible"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "precioRespuesto"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Precio de respuestos $"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "precioManoObra"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "Precio mano de obra $"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "precioTotal"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Precio total $"
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "observaciones"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Observaciones"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Visible = False
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "fechaCaducidad"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Fecha de caducidad"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
         '
         'FrmPresupuestos
         '
