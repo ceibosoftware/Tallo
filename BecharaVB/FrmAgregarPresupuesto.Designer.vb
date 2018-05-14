@@ -22,6 +22,7 @@ Partial Class FrmAgregarPresupuesto
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAgregarPresupuesto))
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtObservacion = New System.Windows.Forms.RichTextBox()
         Me.txtPrecioRepuestos = New System.Windows.Forms.TextBox()
@@ -87,16 +88,18 @@ Partial Class FrmAgregarPresupuesto
         Me.groupBox1.Controls.Add(Me.label1)
         Me.groupBox1.Controls.Add(Me.label4)
         Me.groupBox1.Controls.Add(Me.label3)
-        Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.groupBox1.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.groupBox1.ForeColor = System.Drawing.Color.White
         Me.groupBox1.Location = New System.Drawing.Point(41, 25)
         Me.groupBox1.Name = "groupBox1"
         Me.groupBox1.Size = New System.Drawing.Size(543, 564)
         Me.groupBox1.TabIndex = 9
         Me.groupBox1.TabStop = False
-        Me.groupBox1.Text = "Datos del nuevo Presupuesto"
+        Me.groupBox1.Text = "agregar presupuesto"
         '
         'txtObservacion
         '
+        Me.txtObservacion.BackColor = System.Drawing.Color.OliveDrab
         Me.txtObservacion.Location = New System.Drawing.Point(34, 247)
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.Size = New System.Drawing.Size(468, 126)
@@ -105,9 +108,10 @@ Partial Class FrmAgregarPresupuesto
         '
         'txtPrecioRepuestos
         '
-        Me.txtPrecioRepuestos.Location = New System.Drawing.Point(199, 429)
+        Me.txtPrecioRepuestos.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtPrecioRepuestos.Location = New System.Drawing.Point(215, 427)
         Me.txtPrecioRepuestos.Name = "txtPrecioRepuestos"
-        Me.txtPrecioRepuestos.Size = New System.Drawing.Size(118, 24)
+        Me.txtPrecioRepuestos.Size = New System.Drawing.Size(118, 26)
         Me.txtPrecioRepuestos.TabIndex = 11
         '
         'Label14
@@ -115,15 +119,16 @@ Partial Class FrmAgregarPresupuesto
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(31, 435)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(159, 18)
+        Me.Label14.Size = New System.Drawing.Size(170, 18)
         Me.Label14.TabIndex = 29
-        Me.Label14.Text = "Precio de Repuestos $"
+        Me.Label14.Text = "precio de repuestos $"
         '
         'txtPrecioFinal
         '
-        Me.txtPrecioFinal.Location = New System.Drawing.Point(199, 468)
+        Me.txtPrecioFinal.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtPrecioFinal.Location = New System.Drawing.Point(215, 471)
         Me.txtPrecioFinal.Name = "txtPrecioFinal"
-        Me.txtPrecioFinal.Size = New System.Drawing.Size(118, 24)
+        Me.txtPrecioFinal.Size = New System.Drawing.Size(118, 26)
         Me.txtPrecioFinal.TabIndex = 12
         '
         'Label13
@@ -131,15 +136,16 @@ Partial Class FrmAgregarPresupuesto
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(92, 474)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(98, 18)
+        Me.Label13.Size = New System.Drawing.Size(102, 18)
         Me.Label13.TabIndex = 27
-        Me.Label13.Text = "Precio Final $"
+        Me.Label13.Text = "precio final $"
         '
         'txtPrecioManoObra
         '
-        Me.txtPrecioManoObra.Location = New System.Drawing.Point(199, 385)
+        Me.txtPrecioManoObra.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtPrecioManoObra.Location = New System.Drawing.Point(215, 385)
         Me.txtPrecioManoObra.Name = "txtPrecioManoObra"
-        Me.txtPrecioManoObra.Size = New System.Drawing.Size(118, 24)
+        Me.txtPrecioManoObra.Size = New System.Drawing.Size(118, 26)
         Me.txtPrecioManoObra.TabIndex = 10
         '
         'Label11
@@ -147,13 +153,16 @@ Partial Class FrmAgregarPresupuesto
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(31, 388)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(162, 18)
+        Me.Label11.Size = New System.Drawing.Size(178, 18)
         Me.Label11.TabIndex = 25
-        Me.Label11.Text = "Precio Mano de Obra $"
+        Me.Label11.Text = "precio mano de obra $"
         '
         'cmbCombustible
         '
+        Me.cmbCombustible.BackColor = System.Drawing.Color.OliveDrab
         Me.cmbCombustible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbCombustible.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmbCombustible.ForeColor = System.Drawing.Color.White
         Me.cmbCombustible.FormattingEnabled = True
         Me.cmbCombustible.Items.AddRange(New Object() {"Nafta", "GNC", "Diesel"})
         Me.cmbCombustible.Location = New System.Drawing.Point(381, 28)
@@ -166,24 +175,25 @@ Partial Class FrmAgregarPresupuesto
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(31, 226)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(130, 18)
+        Me.Label12.Size = New System.Drawing.Size(143, 18)
         Me.Label12.TabIndex = 22
-        Me.Label12.Text = "Trabajos a realizar"
+        Me.Label12.Text = "trabajos a realizar"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(280, 28)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(91, 18)
+        Me.Label10.Size = New System.Drawing.Size(97, 18)
         Me.Label10.TabIndex = 18
-        Me.Label10.Text = "Combustible"
+        Me.Label10.Text = "combustible"
         '
         'txtKilometros
         '
+        Me.txtKilometros.BackColor = System.Drawing.Color.OliveDrab
         Me.txtKilometros.Location = New System.Drawing.Point(381, 145)
         Me.txtKilometros.Name = "txtKilometros"
-        Me.txtKilometros.Size = New System.Drawing.Size(121, 24)
+        Me.txtKilometros.Size = New System.Drawing.Size(121, 26)
         Me.txtKilometros.TabIndex = 8
         '
         'Label9
@@ -191,15 +201,16 @@ Partial Class FrmAgregarPresupuesto
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(280, 148)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(80, 18)
+        Me.Label9.Size = New System.Drawing.Size(87, 18)
         Me.Label9.TabIndex = 16
-        Me.Label9.Text = "Kilometros"
+        Me.Label9.Text = "kilometros"
         '
         'txtModelo
         '
+        Me.txtModelo.BackColor = System.Drawing.Color.OliveDrab
         Me.txtModelo.Location = New System.Drawing.Point(381, 104)
         Me.txtModelo.Name = "txtModelo"
-        Me.txtModelo.Size = New System.Drawing.Size(121, 24)
+        Me.txtModelo.Size = New System.Drawing.Size(121, 26)
         Me.txtModelo.TabIndex = 7
         '
         'Label8
@@ -207,15 +218,16 @@ Partial Class FrmAgregarPresupuesto
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(280, 107)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(58, 18)
+        Me.Label8.Size = New System.Drawing.Size(64, 18)
         Me.Label8.TabIndex = 14
-        Me.Label8.Text = "Modelo"
+        Me.Label8.Text = "modelo"
         '
         'txtMarca
         '
+        Me.txtMarca.BackColor = System.Drawing.Color.OliveDrab
         Me.txtMarca.Location = New System.Drawing.Point(381, 66)
         Me.txtMarca.Name = "txtMarca"
-        Me.txtMarca.Size = New System.Drawing.Size(121, 24)
+        Me.txtMarca.Size = New System.Drawing.Size(121, 26)
         Me.txtMarca.TabIndex = 6
         '
         'Label7
@@ -223,15 +235,17 @@ Partial Class FrmAgregarPresupuesto
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(280, 66)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(50, 18)
+        Me.Label7.Size = New System.Drawing.Size(55, 18)
         Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Marca"
+        Me.Label7.Text = "marca"
         '
         'dtpCaducidad
         '
-        Me.dtpCaducidad.Location = New System.Drawing.Point(199, 513)
+        Me.dtpCaducidad.CalendarForeColor = System.Drawing.Color.OliveDrab
+        Me.dtpCaducidad.CalendarMonthBackground = System.Drawing.Color.OliveDrab
+        Me.dtpCaducidad.Location = New System.Drawing.Point(215, 510)
         Me.dtpCaducidad.Name = "dtpCaducidad"
-        Me.dtpCaducidad.Size = New System.Drawing.Size(257, 24)
+        Me.dtpCaducidad.Size = New System.Drawing.Size(257, 26)
         Me.dtpCaducidad.TabIndex = 13
         '
         'label6
@@ -239,44 +253,49 @@ Partial Class FrmAgregarPresupuesto
         Me.label6.AutoSize = True
         Me.label6.Location = New System.Drawing.Point(47, 518)
         Me.label6.Name = "label6"
-        Me.label6.Size = New System.Drawing.Size(143, 18)
+        Me.label6.Size = New System.Drawing.Size(149, 18)
         Me.label6.TabIndex = 10
-        Me.label6.Text = "Fecha de Caducidad"
+        Me.label6.Text = "fecha de caducidad"
         '
         'txtApellido
         '
         Me.txtApellido.AcceptsReturn = True
+        Me.txtApellido.BackColor = System.Drawing.Color.OliveDrab
         Me.txtApellido.Location = New System.Drawing.Point(148, 59)
         Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(118, 24)
+        Me.txtApellido.Size = New System.Drawing.Size(118, 26)
         Me.txtApellido.TabIndex = 1
         '
         'txtPatente
         '
+        Me.txtPatente.BackColor = System.Drawing.Color.OliveDrab
         Me.txtPatente.Location = New System.Drawing.Point(148, 180)
         Me.txtPatente.Name = "txtPatente"
-        Me.txtPatente.Size = New System.Drawing.Size(118, 24)
+        Me.txtPatente.Size = New System.Drawing.Size(118, 26)
         Me.txtPatente.TabIndex = 4
         '
         'txtDireccion
         '
+        Me.txtDireccion.BackColor = System.Drawing.Color.OliveDrab
         Me.txtDireccion.Location = New System.Drawing.Point(148, 139)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(118, 24)
+        Me.txtDireccion.Size = New System.Drawing.Size(118, 26)
         Me.txtDireccion.TabIndex = 3
         '
         'txtDni
         '
+        Me.txtDni.BackColor = System.Drawing.Color.OliveDrab
         Me.txtDni.Location = New System.Drawing.Point(148, 99)
         Me.txtDni.Name = "txtDni"
-        Me.txtDni.Size = New System.Drawing.Size(118, 24)
+        Me.txtDni.Size = New System.Drawing.Size(118, 26)
         Me.txtDni.TabIndex = 2
         '
         'txtNombre
         '
+        Me.txtNombre.BackColor = System.Drawing.Color.OliveDrab
         Me.txtNombre.Location = New System.Drawing.Point(148, 25)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(118, 24)
+        Me.txtNombre.Size = New System.Drawing.Size(118, 26)
         Me.txtNombre.TabIndex = 0
         '
         'label2
@@ -284,56 +303,58 @@ Partial Class FrmAgregarPresupuesto
         Me.label2.AutoSize = True
         Me.label2.Location = New System.Drawing.Point(31, 63)
         Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(59, 18)
+        Me.label2.Size = New System.Drawing.Size(63, 18)
         Me.label2.TabIndex = 1
-        Me.label2.Text = "Apellido"
+        Me.label2.Text = "apellido"
         '
         'label5
         '
         Me.label5.AutoSize = True
         Me.label5.Location = New System.Drawing.Point(31, 142)
         Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(33, 18)
+        Me.label5.Size = New System.Drawing.Size(29, 18)
         Me.label5.TabIndex = 4
-        Me.label5.Text = "DNI"
+        Me.label5.Text = "dni"
         '
         'label1
         '
         Me.label1.AutoSize = True
         Me.label1.Location = New System.Drawing.Point(31, 32)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(62, 18)
+        Me.label1.Size = New System.Drawing.Size(66, 18)
         Me.label1.TabIndex = 0
-        Me.label1.Text = "Nombre"
+        Me.label1.Text = "nombre"
         '
         'label4
         '
         Me.label4.AutoSize = True
         Me.label4.Location = New System.Drawing.Point(31, 183)
         Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(58, 18)
+        Me.label4.Size = New System.Drawing.Size(65, 18)
         Me.label4.TabIndex = 3
-        Me.label4.Text = "Patente"
+        Me.label4.Text = "patente"
         '
         'label3
         '
         Me.label3.AutoSize = True
         Me.label3.Location = New System.Drawing.Point(31, 102)
         Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(71, 18)
+        Me.label3.Size = New System.Drawing.Size(73, 18)
         Me.label3.TabIndex = 2
-        Me.label3.Text = "Direccion"
+        Me.label3.Text = "direccion"
         '
         'button2
         '
         Me.button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.button2.Image = Global.BecharaVB.My.Resources.Resources.icono_eliminar
+        Me.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.button2.Image = Global.BecharaVB.My.Resources.Resources.eliminar
         Me.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.button2.Location = New System.Drawing.Point(491, 618)
         Me.button2.Name = "button2"
-        Me.button2.Size = New System.Drawing.Size(75, 35)
+        Me.button2.Size = New System.Drawing.Size(81, 35)
         Me.button2.TabIndex = 1
-        Me.button2.Text = "Cancelar"
+        Me.button2.Text = "cancelar"
         Me.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button2.UseVisualStyleBackColor = False
         '
@@ -342,13 +363,15 @@ Partial Class FrmAgregarPresupuesto
         Me.button1.AutoSize = True
         Me.button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.button1.Image = Global.BecharaVB.My.Resources.Resources.tilde
+        Me.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.button1.Image = Global.BecharaVB.My.Resources.Resources.check
         Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.button1.Location = New System.Drawing.Point(385, 618)
         Me.button1.Name = "button1"
         Me.button1.Size = New System.Drawing.Size(78, 35)
         Me.button1.TabIndex = 0
-        Me.button1.Text = "Aceptar"
+        Me.button1.Text = "aceptar"
         Me.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button1.UseVisualStyleBackColor = False
         '
@@ -363,9 +386,10 @@ Partial Class FrmAgregarPresupuesto
         Me.Controls.Add(Me.groupBox1)
         Me.Controls.Add(Me.button1)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmAgregarPresupuesto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "AGREGAR PRESUPUESTO"
+        Me.Text = "agregar presupuesto"
         Me.groupBox1.ResumeLayout(False)
         Me.groupBox1.PerformLayout()
         Me.ResumeLayout(False)

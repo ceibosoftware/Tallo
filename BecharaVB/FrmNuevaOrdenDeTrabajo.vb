@@ -302,5 +302,7 @@ Public Class FrmNuevaOrdenDeTrabajo
         Me.Close()
     End Sub
 
+    Private Sub tipotrabajo_Enter(sender As Object, e As EventArgs) Handles tipotrabajo.Enter
 
+    End Sub
 End Class

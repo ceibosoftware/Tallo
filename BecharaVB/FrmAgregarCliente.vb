@@ -90,4 +90,15 @@
         Return MyBase.ProcessCmdKey(msg, keyData)
     End Function
 
+    Private Sub label4_Click(sender As Object, e As EventArgs) Handles label4.Click
+
+    End Sub
+
+    Private Sub label5_Click(sender As Object, e As EventArgs) Handles label5.Click
+
+    End Sub
+
+    Private Sub label1_Click(sender As Object, e As EventArgs) Handles label1.Click
+
+    End Sub
 End Class

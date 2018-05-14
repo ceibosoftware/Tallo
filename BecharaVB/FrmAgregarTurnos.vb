@@ -9,6 +9,7 @@
 
 
 
+
     Private Function Valida() As Boolean
         If String.IsNullOrEmpty(txtnombreturno.Text) Or String.IsNullOrEmpty(txtapellidoturno.Text) Or String.IsNullOrEmpty(txtObservacionturno.Text) Or String.IsNullOrEmpty(dtpFechaTurno.Text) Or String.IsNullOrEmpty(txttelefonoturno.Text) Or String.IsNullOrEmpty(cmbhorarioturno.Text) Then
 
@@ -64,7 +65,9 @@
         txtnombreturno.Select()
         cmbhorarioturno.SelectedIndex = 1
         txttelefonoturno.MaxLength = 10
+
     End Sub
+
 
     Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
 

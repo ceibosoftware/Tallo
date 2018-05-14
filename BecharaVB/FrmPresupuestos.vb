@@ -292,4 +292,8 @@ Public Class FrmPresupuestos
     Private Sub PresupuestoDataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles PresupuestoDataGridView.CellClick
         txtObservacion.Text = PresupuestoDataGridView.CurrentRow.Cells(11).Value.ToString
     End Sub
+
+    Private Sub txtObservacion_TextChanged(sender As Object, e As EventArgs) Handles txtObservacion.TextChanged
+
+    End Sub
 End Class

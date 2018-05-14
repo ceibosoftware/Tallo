@@ -24,6 +24,7 @@ Partial Class FrmModificarTipoTrabajo
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim NombreLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmModificarTipoTrabajo))
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.BecharaDataSet = New BecharaVB.becharaDataSet()
@@ -41,35 +42,40 @@ Partial Class FrmModificarTipoTrabajo
         NombreLabel.AutoSize = True
         NombreLabel.BackColor = System.Drawing.Color.Transparent
         NombreLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        NombreLabel.Location = New System.Drawing.Point(50, 48)
+        NombreLabel.ForeColor = System.Drawing.Color.White
+        NombreLabel.Location = New System.Drawing.Point(127, 19)
         NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(66, 18)
+        NombreLabel.Size = New System.Drawing.Size(63, 18)
         NombreLabel.TabIndex = 4
-        NombreLabel.Text = "Nombre:"
+        NombreLabel.Text = "nombre:"
         '
         'btnAceptar
         '
-        Me.btnAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnAceptar.Image = Global.BecharaVB.My.Resources.Resources.tilde
+        Me.btnAceptar.BackColor = System.Drawing.Color.OliveDrab
+        Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAceptar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAceptar.Image = Global.BecharaVB.My.Resources.Resources.check
         Me.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAceptar.Location = New System.Drawing.Point(68, 113)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 31)
+        Me.btnAceptar.Size = New System.Drawing.Size(83, 31)
         Me.btnAceptar.TabIndex = 1
-        Me.btnAceptar.Text = "Aceptar"
+        Me.btnAceptar.Text = "aceptar"
         Me.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
         'btnCancelar
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnCancelar.Image = Global.BecharaVB.My.Resources.Resources.icono_eliminar1
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.Image = Global.BecharaVB.My.Resources.Resources.eliminar
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(187, 113)
+        Me.btnCancelar.Location = New System.Drawing.Point(184, 109)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 31)
+        Me.btnCancelar.Size = New System.Drawing.Size(85, 37)
         Me.btnCancelar.TabIndex = 2
-        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.Text = "cancelar"
         Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -102,10 +108,11 @@ Partial Class FrmModificarTipoTrabajo
         '
         'txtNombretrabajo
         '
+        Me.txtNombretrabajo.BackColor = System.Drawing.Color.OliveDrab
         Me.txtNombretrabajo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TipotrabajoBindingSource, "nombre", True))
-        Me.txtNombretrabajo.Location = New System.Drawing.Point(137, 49)
+        Me.txtNombretrabajo.Location = New System.Drawing.Point(68, 56)
         Me.txtNombretrabajo.Name = "txtNombretrabajo"
-        Me.txtNombretrabajo.Size = New System.Drawing.Size(100, 20)
+        Me.txtNombretrabajo.Size = New System.Drawing.Size(201, 20)
         Me.txtNombretrabajo.TabIndex = 0
         '
         'FrmModificarTipoTrabajo
@@ -120,9 +127,10 @@ Partial Class FrmModificarTipoTrabajo
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmModificarTipoTrabajo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "S"
+        Me.Text = "modificar tipo de trabajo - tallo"
         CType(Me.BecharaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TipotrabajoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

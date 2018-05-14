@@ -138,5 +138,11 @@
         Return MyBase.ProcessCmdKey(msg, keyData)
     End Function
 
+    Private Sub txtPrecioRepuestos_TextChanged(sender As Object, e As EventArgs) Handles txtPrecioRepuestos.TextChanged
 
+    End Sub
+
+    Private Sub dtpCaducidad_ValueChanged(sender As Object, e As EventArgs) Handles dtpCaducidad.ValueChanged
+
+    End Sub
 End Class

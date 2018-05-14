@@ -23,6 +23,12 @@ Partial Class FrmTrabajos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTrabajos))
         Me.button3 = New System.Windows.Forms.Button()
         Me.button2 = New System.Windows.Forms.Button()
         Me.button1 = New System.Windows.Forms.Button()
@@ -55,39 +61,42 @@ Partial Class FrmTrabajos
         'button3
         '
         Me.button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.button3.Image = Global.BecharaVB.My.Resources.Resources.icono_eliminar1
+        Me.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button3.Image = Global.BecharaVB.My.Resources.Resources.eliminar
         Me.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button3.Location = New System.Drawing.Point(1030, 574)
+        Me.button3.Location = New System.Drawing.Point(985, 574)
         Me.button3.Name = "button3"
-        Me.button3.Size = New System.Drawing.Size(109, 32)
+        Me.button3.Size = New System.Drawing.Size(74, 32)
         Me.button3.TabIndex = 3
-        Me.button3.Text = "Eliminar trabajo"
+        Me.button3.Text = "eliminar"
         Me.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button3.UseVisualStyleBackColor = False
         '
         'button2
         '
         Me.button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.button2.Image = Global.BecharaVB.My.Resources.Resources.editar
         Me.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.button2.Location = New System.Drawing.Point(893, 574)
         Me.button2.Name = "button2"
-        Me.button2.Size = New System.Drawing.Size(112, 32)
+        Me.button2.Size = New System.Drawing.Size(86, 32)
         Me.button2.TabIndex = 2
-        Me.button2.Text = "Modificar trabajo"
+        Me.button2.Text = "modificar"
         Me.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button2.UseVisualStyleBackColor = False
         '
         'button1
         '
-        Me.button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.button1.BackColor = System.Drawing.Color.OliveDrab
+        Me.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.button1.Image = Global.BecharaVB.My.Resources.Resources.add
         Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button1.Location = New System.Drawing.Point(765, 574)
+        Me.button1.Location = New System.Drawing.Point(806, 574)
         Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(107, 32)
+        Me.button1.Size = New System.Drawing.Size(81, 32)
         Me.button1.TabIndex = 1
-        Me.button1.Text = "Agregar trabajo"
+        Me.button1.Text = "agregar "
         Me.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button1.UseVisualStyleBackColor = False
         '
@@ -106,12 +115,13 @@ Partial Class FrmTrabajos
         Me.groupBox1.Controls.Add(Me.OrdentrabajoDataGridView)
         Me.groupBox1.Controls.Add(Me.DgvOrdenesTipos)
         Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.groupBox1.ForeColor = System.Drawing.Color.White
         Me.groupBox1.Location = New System.Drawing.Point(39, 106)
         Me.groupBox1.Name = "groupBox1"
         Me.groupBox1.Size = New System.Drawing.Size(1144, 438)
         Me.groupBox1.TabIndex = 23
         Me.groupBox1.TabStop = False
-        Me.groupBox1.Text = "Trabajos"
+        Me.groupBox1.Text = "trabajos"
         '
         'Label3
         '
@@ -120,12 +130,13 @@ Partial Class FrmTrabajos
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(578, 303)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(108, 18)
+        Me.Label3.Size = New System.Drawing.Size(105, 18)
         Me.Label3.TabIndex = 33
-        Me.Label3.Text = "Observaciones"
+        Me.Label3.Text = "observaciones"
         '
         'txtObservacion
         '
+        Me.txtObservacion.BackColor = System.Drawing.Color.OliveDrab
         Me.txtObservacion.Location = New System.Drawing.Point(716, 300)
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.ReadOnly = True
@@ -135,7 +146,18 @@ Partial Class FrmTrabajos
         '
         'OrdentrabajoDataGridView
         '
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        Me.OrdentrabajoDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.OrdentrabajoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.OliveDrab
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.OrdentrabajoDataGridView.DefaultCellStyle = DataGridViewCellStyle2
+        Me.OrdentrabajoDataGridView.GridColor = System.Drawing.Color.OliveDrab
         Me.OrdentrabajoDataGridView.Location = New System.Drawing.Point(103, 42)
         Me.OrdentrabajoDataGridView.Name = "OrdentrabajoDataGridView"
         Me.OrdentrabajoDataGridView.ReadOnly = True
@@ -144,25 +166,46 @@ Partial Class FrmTrabajos
         '
         'DgvOrdenesTipos
         '
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray
+        Me.DgvOrdenesTipos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.DgvOrdenesTipos.BackgroundColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.OliveDrab
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvOrdenesTipos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DgvOrdenesTipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.OliveDrab
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvOrdenesTipos.DefaultCellStyle = DataGridViewCellStyle5
+        Me.DgvOrdenesTipos.GridColor = System.Drawing.Color.OliveDrab
         Me.DgvOrdenesTipos.Location = New System.Drawing.Point(103, 303)
         Me.DgvOrdenesTipos.Name = "DgvOrdenesTipos"
         Me.DgvOrdenesTipos.ReadOnly = True
-        Me.DgvOrdenesTipos.Size = New System.Drawing.Size(325, 114)
+        Me.DgvOrdenesTipos.Size = New System.Drawing.Size(370, 114)
         Me.DgvOrdenesTipos.TabIndex = 1
         '
         'label1
         '
         Me.label1.AutoSize = True
         Me.label1.BackColor = System.Drawing.Color.Transparent
-        Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label1.Image = Global.BecharaVB.My.Resources.Resources.lupa
+        Me.label1.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label1.ForeColor = System.Drawing.Color.White
+        Me.label1.Image = Global.BecharaVB.My.Resources.Resources.lupa1
         Me.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.label1.Location = New System.Drawing.Point(468, 46)
+        Me.label1.Location = New System.Drawing.Point(448, 47)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(163, 18)
+        Me.label1.Size = New System.Drawing.Size(182, 18)
         Me.label1.TabIndex = 31
-        Me.label1.Text = "Buscar por apellido       "
+        Me.label1.Text = "buscar por apellido       "
         Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'OrdentrabajoBindingSource
@@ -229,9 +272,10 @@ Partial Class FrmTrabajos
         Me.Controls.Add(Me.textBox1)
         Me.Controls.Add(Me.groupBox1)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmTrabajos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "TRABAJOS"
+        Me.Text = "trabajos - tallo"
         Me.groupBox1.ResumeLayout(False)
         Me.groupBox1.PerformLayout()
         CType(Me.OrdentrabajoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()

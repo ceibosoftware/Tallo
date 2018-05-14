@@ -1,6 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FrmAuto
+
+
+
+
+
+
+
     Private Sub AutosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.AutosBindingSource.EndEdit()

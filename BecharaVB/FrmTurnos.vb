@@ -1,10 +1,21 @@
 ﻿Imports MySql.Data.MySqlClient
+
+
+
 Public Class TURNOS
+
     Dim BindingT As New BindingSource
     Dim turnoActual As DataRowView
     Dim LoadTurnos As String = "SELECT turnos.idTurno, turnos.nombre ,turnos.apellido ,turnos.telefono , turnos.observaciones, turnos.fechaTurno
                                 ,turnos.horario 
                                 FROM turnos "
+
+
+
+
+
+
+
 
     Private Sub TurnosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
@@ -13,12 +24,16 @@ Public Class TURNOS
 
     End Sub
 
+
+
     Private Sub FrmTurnos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BecharaDataSet.turnos' table. You can move, or remove it, as needed.
         Me.TurnosTableAdapter.Fill(Me.BecharaDataSet.turnos)
         EliminarFechas()
         cargarGridTurnos(LoadTurnos)
+
     End Sub
+
 
     Private Sub button1_Click(sender As Object, e As EventArgs) Handles button1.Click
         If (DialogResult.OK = FrmAgregarTurnos.ShowDialog()) Then

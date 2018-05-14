@@ -23,6 +23,10 @@ Partial Class FrmAuto
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAuto))
         Me.button3 = New System.Windows.Forms.Button()
         Me.button2 = New System.Windows.Forms.Button()
         Me.button1 = New System.Windows.Forms.Button()
@@ -69,45 +73,55 @@ Partial Class FrmAuto
         '
         Me.button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.button3.Image = Global.BecharaVB.My.Resources.Resources.icono_eliminar
+        Me.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button3.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.button3.Image = Global.BecharaVB.My.Resources.Resources.eliminar
         Me.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button3.Location = New System.Drawing.Point(762, 415)
+        Me.button3.Location = New System.Drawing.Point(797, 415)
         Me.button3.Name = "button3"
-        Me.button3.Size = New System.Drawing.Size(96, 32)
+        Me.button3.Size = New System.Drawing.Size(83, 32)
         Me.button3.TabIndex = 4
-        Me.button3.Text = "Eliminar Auto"
+        Me.button3.Text = "eliminar"
         Me.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button3.UseVisualStyleBackColor = False
         '
         'button2
         '
         Me.button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button2.Image = Global.BecharaVB.My.Resources.Resources.editar
         Me.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button2.Location = New System.Drawing.Point(640, 415)
+        Me.button2.Location = New System.Drawing.Point(707, 415)
         Me.button2.Name = "button2"
-        Me.button2.Size = New System.Drawing.Size(104, 32)
+        Me.button2.Size = New System.Drawing.Size(84, 32)
         Me.button2.TabIndex = 3
-        Me.button2.Text = "Modificar Auto"
+        Me.button2.Text = "modificar"
         Me.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button2.UseVisualStyleBackColor = False
         '
         'button1
         '
-        Me.button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.button1.BackColor = System.Drawing.Color.OliveDrab
+        Me.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.button1.Image = Global.BecharaVB.My.Resources.Resources.add
         Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button1.Location = New System.Drawing.Point(525, 415)
+        Me.button1.Location = New System.Drawing.Point(616, 415)
         Me.button1.Name = "button1"
-        Me.button1.Size = New System.Drawing.Size(96, 32)
+        Me.button1.Size = New System.Drawing.Size(85, 32)
         Me.button1.TabIndex = 2
-        Me.button1.Text = "Agregar Auto"
+        Me.button1.Text = "agregar"
         Me.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button1.UseVisualStyleBackColor = False
         '
         'cmbFiltroAuto
         '
+        Me.cmbFiltroAuto.BackColor = System.Drawing.Color.OliveDrab
         Me.cmbFiltroAuto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbFiltroAuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmbFiltroAuto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbFiltroAuto.ForeColor = System.Drawing.Color.Black
         Me.cmbFiltroAuto.FormattingEnabled = True
         Me.cmbFiltroAuto.Items.AddRange(New Object() {"Apellido", "Patente", "Modelo"})
         Me.cmbFiltroAuto.Location = New System.Drawing.Point(549, 41)
@@ -120,24 +134,26 @@ Partial Class FrmAuto
         Me.label2.AutoSize = True
         Me.label2.BackColor = System.Drawing.Color.Transparent
         Me.label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label2.ForeColor = System.Drawing.Color.White
         Me.label2.Location = New System.Drawing.Point(464, 40)
         Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(79, 18)
+        Me.label2.Size = New System.Drawing.Size(74, 18)
         Me.label2.TabIndex = 19
-        Me.label2.Text = "Filtrar por :"
+        Me.label2.Text = "filtrar por :"
         '
         'label1
         '
         Me.label1.AutoSize = True
         Me.label1.BackColor = System.Drawing.Color.Transparent
         Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label1.Image = Global.BecharaVB.My.Resources.Resources.lupa
+        Me.label1.ForeColor = System.Drawing.Color.White
+        Me.label1.Image = Global.BecharaVB.My.Resources.Resources.lupa1
         Me.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.label1.Location = New System.Drawing.Point(198, 40)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(83, 18)
+        Me.label1.Size = New System.Drawing.Size(81, 18)
         Me.label1.TabIndex = 18
-        Me.label1.Text = "Buscar       "
+        Me.label1.Text = "buscar       "
         Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtBuscarAuto
@@ -152,19 +168,41 @@ Partial Class FrmAuto
         Me.groupBox1.BackColor = System.Drawing.Color.Transparent
         Me.groupBox1.Controls.Add(Me.AutosDataGridView)
         Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.groupBox1.ForeColor = System.Drawing.Color.White
         Me.groupBox1.Location = New System.Drawing.Point(38, 86)
         Me.groupBox1.Name = "groupBox1"
         Me.groupBox1.Size = New System.Drawing.Size(870, 315)
         Me.groupBox1.TabIndex = 15
         Me.groupBox1.TabStop = False
-        Me.groupBox1.Text = "Vehiculos"
+        Me.groupBox1.Text = "vehiculos"
         '
         'AutosDataGridView
         '
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray
+        Me.AutosDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.AutosDataGridView.AutoGenerateColumns = False
+        Me.AutosDataGridView.BackgroundColor = System.Drawing.Color.White
+        Me.AutosDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.YellowGreen
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AutosDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.AutosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AutosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.idAuto})
         Me.AutosDataGridView.DataSource = Me.AutosBindingSource
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.YellowGreen
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AutosDataGridView.DefaultCellStyle = DataGridViewCellStyle3
+        Me.AutosDataGridView.GridColor = System.Drawing.Color.OliveDrab
         Me.AutosDataGridView.Location = New System.Drawing.Point(12, 34)
         Me.AutosDataGridView.Name = "AutosDataGridView"
         Me.AutosDataGridView.ReadOnly = True
@@ -174,91 +212,91 @@ Partial Class FrmAuto
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "marca"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Marca"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "marca"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
         '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "modelo"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Modelo"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "modelo"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn13
         '
         Me.DataGridViewTextBoxColumn13.DataPropertyName = "patente"
-        Me.DataGridViewTextBoxColumn13.HeaderText = "Patente"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "patente"
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
         Me.DataGridViewTextBoxColumn13.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "anio"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Año"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "año"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "color"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Color"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "color"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "filtroAceite"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Filtro Aceite"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "filtro aceite"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "filtroAire"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Filtro Aire"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "filtro aire"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "filtroCombustible"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Filtro Combustible"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "filtro combustible"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
         '
         'DataGridViewTextBoxColumn8
         '
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "filtroHabitaculo"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "Filtro Habitaculo"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "filtro habitaculo"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
         '
         'DataGridViewTextBoxColumn9
         '
         Me.DataGridViewTextBoxColumn9.DataPropertyName = "aceiteMotor"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Aceite Motor"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "aceite motor"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
         'DataGridViewTextBoxColumn10
         '
         Me.DataGridViewTextBoxColumn10.DataPropertyName = "kilometraje"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Kilometraje"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "kilometraje"
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
         Me.DataGridViewTextBoxColumn10.ReadOnly = True
         '
         'DataGridViewTextBoxColumn11
         '
         Me.DataGridViewTextBoxColumn11.DataPropertyName = "distribucion"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Correa Distribución"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "correa distribución"
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
         Me.DataGridViewTextBoxColumn11.ReadOnly = True
         '
         'DataGridViewTextBoxColumn12
         '
         Me.DataGridViewTextBoxColumn12.DataPropertyName = "tipoCombustible"
-        Me.DataGridViewTextBoxColumn12.HeaderText = "Tipo de Combustible"
+        Me.DataGridViewTextBoxColumn12.HeaderText = "tipo de combustible"
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
         Me.DataGridViewTextBoxColumn12.ReadOnly = True
         '
@@ -343,9 +381,10 @@ Partial Class FrmAuto
         Me.Controls.Add(Me.txtBuscarAuto)
         Me.Controls.Add(Me.groupBox1)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmAuto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "AUTOS"
+        Me.Text = "autos - tallo"
         Me.groupBox1.ResumeLayout(False)
         CType(Me.AutosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AutosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

@@ -1,14 +1,49 @@
-﻿Imports MySql.Data.MySqlClient
+﻿
+Imports MySql.Data.MySqlClient
 
 
 Public Class principal
     Public conexion As New MySqlConnection
+
+
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim conexion As New MySqlConnection("data source =localhost;user id=root; password='';database ='bechara'")
         cmbFiltroCliente.Select()
         cmbFiltroCliente.SelectedIndex = 1
     End Sub
+
+
+
+
+    Public Sub New()
+        Try
+            ' initialize added component on form1, which is menu strip;
+            'note: if you have added any second component alongside menu
+            'strip, such as context menu strip just add additional code 
+            'line under InitializeComponent(), and it will work;
+            InitializeComponent()
+            menuStrip1.Renderer = New MyRenderer()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Public Class MyRenderer
+        Inherits ToolStripProfessionalRenderer
+        Protected Overloads Overrides Sub OnRenderMenuItemBackground(ByVal e As ToolStripItemRenderEventArgs)
+            Try
+                Dim rc As New Rectangle(Point.Empty, e.Item.Size)
+                Dim c As Color = IIf(e.Item.Selected, Color.DarkGray, Color.OliveDrab)
+                Using brush As New SolidBrush(c)
+                    e.Graphics.FillRectangle(brush, rc)
+                End Using
+            Catch ex As Exception
+
+            End Try
+
+        End Sub
+    End Class
+
 
 
 
@@ -193,6 +228,20 @@ Public Class principal
 
     Private Sub Trabajos_Click(sender As Object, e As EventArgs) Handles Trabajos.Click
         FrmReporteTrabajos.ShowDialog()
+    End Sub
+
+    Private Sub cmbFiltroCliente_DrawItem(sender As Object, e As DrawItemEventArgs) Handles cmbFiltroCliente.DrawItem
+        Dim rect As Rectangle = e.Bounds
+
+        If e.State And DrawItemState.Selected Then
+            e.Graphics.FillRectangle(SystemBrushes.Highlight, rect)
+            Dim b As New SolidBrush(Color.OliveDrab)
+            e.Graphics.FillRectangle(b, rect)
+            e.Graphics.DrawRectangle(Pens.Black, rect)
+        Else : e.Graphics.FillRectangle(SystemBrushes.Window, rect)
+        End If
+
+
     End Sub
 End Class
 

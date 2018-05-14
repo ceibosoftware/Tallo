@@ -23,6 +23,7 @@ Partial Class FrmAgregarNuevoAuto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAgregarNuevoAuto))
         Me.button2 = New System.Windows.Forms.Button()
         Me.button1 = New System.Windows.Forms.Button()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
@@ -72,26 +73,28 @@ Partial Class FrmAgregarNuevoAuto
         'button2
         '
         Me.button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.button2.Image = Global.BecharaVB.My.Resources.Resources.icono_eliminar
+        Me.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button2.Image = Global.BecharaVB.My.Resources.Resources.eliminar
         Me.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.button2.Location = New System.Drawing.Point(582, 561)
         Me.button2.Name = "button2"
         Me.button2.Size = New System.Drawing.Size(75, 31)
         Me.button2.TabIndex = 2
-        Me.button2.Text = "Cancelar"
+        Me.button2.Text = "cancelar"
         Me.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button2.UseVisualStyleBackColor = False
         '
         'button1
         '
-        Me.button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.button1.Image = Global.BecharaVB.My.Resources.Resources.tilde
+        Me.button1.BackColor = System.Drawing.Color.OliveDrab
+        Me.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button1.Image = Global.BecharaVB.My.Resources.Resources.check
         Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.button1.Location = New System.Drawing.Point(464, 561)
+        Me.button1.Location = New System.Drawing.Point(492, 561)
         Me.button1.Name = "button1"
         Me.button1.Size = New System.Drawing.Size(75, 31)
         Me.button1.TabIndex = 1
-        Me.button1.Text = "Aceptar"
+        Me.button1.Text = "aceptar"
         Me.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button1.UseVisualStyleBackColor = False
         '
@@ -130,55 +133,64 @@ Partial Class FrmAgregarNuevoAuto
         Me.groupBox1.Controls.Add(Me.label1)
         Me.groupBox1.Controls.Add(Me.label4)
         Me.groupBox1.Controls.Add(Me.label3)
-        Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.groupBox1.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.groupBox1.ForeColor = System.Drawing.Color.White
         Me.groupBox1.Location = New System.Drawing.Point(37, 40)
         Me.groupBox1.Name = "groupBox1"
         Me.groupBox1.Size = New System.Drawing.Size(643, 492)
         Me.groupBox1.TabIndex = 0
         Me.groupBox1.TabStop = False
-        Me.groupBox1.Text = "Datos Del Nuevo Auto"
+        Me.groupBox1.Text = "agregar auto"
         '
         'txtDni
         '
+        Me.txtDni.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtDni.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDni.Location = New System.Drawing.Point(150, 262)
         Me.txtDni.Name = "txtDni"
-        Me.txtDni.Size = New System.Drawing.Size(142, 24)
+        Me.txtDni.Size = New System.Drawing.Size(142, 26)
         Me.txtDni.TabIndex = 33
         '
         'Label16
         '
         Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(80, 262)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(33, 18)
+        Me.Label16.Size = New System.Drawing.Size(29, 18)
         Me.Label16.TabIndex = 34
-        Me.Label16.Text = "DNI"
+        Me.Label16.Text = "dni"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Image = Global.BecharaVB.My.Resources.Resources.lupa
+        Me.Label15.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Image = Global.BecharaVB.My.Resources.Resources.lupa1
         Me.Label15.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Label15.Location = New System.Drawing.Point(10, 51)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(121, 18)
+        Me.Label15.Size = New System.Drawing.Size(134, 18)
         Me.Label15.TabIndex = 32
-        Me.Label15.Text = "Buscar cliente     "
+        Me.Label15.Text = "buscar cliente     "
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtbuscar
         '
-        Me.txtbuscar.Location = New System.Drawing.Point(137, 51)
+        Me.txtbuscar.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtbuscar.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbuscar.Location = New System.Drawing.Point(150, 48)
         Me.txtbuscar.Name = "txtbuscar"
-        Me.txtbuscar.Size = New System.Drawing.Size(155, 24)
+        Me.txtbuscar.Size = New System.Drawing.Size(155, 26)
         Me.txtbuscar.TabIndex = 0
         '
         'listClientes
         '
+        Me.listClientes.BackColor = System.Drawing.Color.OliveDrab
         Me.listClientes.DataSource = Me.ClientesBindingSource
         Me.listClientes.DisplayMember = "apellido"
+        Me.listClientes.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listClientes.ForeColor = System.Drawing.Color.Black
         Me.listClientes.FormattingEnabled = True
         Me.listClientes.ItemHeight = 18
         Me.listClientes.Location = New System.Drawing.Point(150, 90)
@@ -200,7 +212,10 @@ Partial Class FrmAgregarNuevoAuto
         'cmbTipoCombustible
         '
         Me.cmbTipoCombustible.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.cmbTipoCombustible.BackColor = System.Drawing.Color.OliveDrab
         Me.cmbTipoCombustible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTipoCombustible.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmbTipoCombustible.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbTipoCombustible.FormattingEnabled = True
         Me.cmbTipoCombustible.Items.AddRange(New Object() {"Nafta", "Diesel", "GNC"})
         Me.cmbTipoCombustible.Location = New System.Drawing.Point(476, 311)
@@ -210,213 +225,251 @@ Partial Class FrmAgregarNuevoAuto
         '
         'txtCorrea
         '
+        Me.txtCorrea.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtCorrea.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorrea.Location = New System.Drawing.Point(476, 349)
         Me.txtCorrea.Name = "txtCorrea"
-        Me.txtCorrea.Size = New System.Drawing.Size(122, 24)
+        Me.txtCorrea.Size = New System.Drawing.Size(122, 26)
         Me.txtCorrea.TabIndex = 14
         '
         'label13
         '
         Me.label13.AutoSize = True
+        Me.label13.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label13.Location = New System.Drawing.Point(323, 352)
         Me.label13.Name = "label13"
-        Me.label13.Size = New System.Drawing.Size(136, 18)
+        Me.label13.Size = New System.Drawing.Size(144, 18)
         Me.label13.TabIndex = 26
-        Me.label13.Text = "Correa Distribución"
+        Me.label13.Text = "correa distribución"
         '
         'label14
         '
         Me.label14.AutoSize = True
+        Me.label14.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label14.Location = New System.Drawing.Point(323, 312)
         Me.label14.Name = "label14"
-        Me.label14.Size = New System.Drawing.Size(124, 18)
+        Me.label14.Size = New System.Drawing.Size(130, 18)
         Me.label14.TabIndex = 25
-        Me.label14.Text = "Tipo Combustible"
+        Me.label14.Text = "tipo combustible"
         '
         'txtKilometraje
         '
+        Me.txtKilometraje.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtKilometraje.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtKilometraje.Location = New System.Drawing.Point(476, 269)
         Me.txtKilometraje.Name = "txtKilometraje"
-        Me.txtKilometraje.Size = New System.Drawing.Size(122, 24)
+        Me.txtKilometraje.Size = New System.Drawing.Size(122, 26)
         Me.txtKilometraje.TabIndex = 12
         '
         'label11
         '
         Me.label11.AutoSize = True
+        Me.label11.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label11.Location = New System.Drawing.Point(323, 274)
         Me.label11.Name = "label11"
-        Me.label11.Size = New System.Drawing.Size(82, 18)
+        Me.label11.Size = New System.Drawing.Size(92, 18)
         Me.label11.TabIndex = 22
-        Me.label11.Text = "Kilometraje"
+        Me.label11.Text = "kilometraje"
         '
         'txtAceiteMotor
         '
+        Me.txtAceiteMotor.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtAceiteMotor.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAceiteMotor.Location = New System.Drawing.Point(476, 232)
         Me.txtAceiteMotor.Name = "txtAceiteMotor"
-        Me.txtAceiteMotor.Size = New System.Drawing.Size(122, 24)
+        Me.txtAceiteMotor.Size = New System.Drawing.Size(122, 26)
         Me.txtAceiteMotor.TabIndex = 11
         '
         'label12
         '
         Me.label12.AutoSize = True
+        Me.label12.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label12.Location = New System.Drawing.Point(323, 233)
         Me.label12.Name = "label12"
-        Me.label12.Size = New System.Drawing.Size(92, 18)
+        Me.label12.Size = New System.Drawing.Size(104, 18)
         Me.label12.TabIndex = 21
-        Me.label12.Text = "Aceite Motor"
+        Me.label12.Text = "aceite motor"
         '
         'txtFiltroHabitaculo
         '
+        Me.txtFiltroHabitaculo.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtFiltroHabitaculo.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFiltroHabitaculo.Location = New System.Drawing.Point(476, 191)
         Me.txtFiltroHabitaculo.Name = "txtFiltroHabitaculo"
-        Me.txtFiltroHabitaculo.Size = New System.Drawing.Size(122, 24)
+        Me.txtFiltroHabitaculo.Size = New System.Drawing.Size(122, 26)
         Me.txtFiltroHabitaculo.TabIndex = 10
         '
         'label9
         '
         Me.label9.AutoSize = True
+        Me.label9.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label9.Location = New System.Drawing.Point(323, 196)
         Me.label9.Name = "label9"
-        Me.label9.Size = New System.Drawing.Size(115, 18)
+        Me.label9.Size = New System.Drawing.Size(121, 18)
         Me.label9.TabIndex = 18
-        Me.label9.Text = "Filtro Habitaculo"
+        Me.label9.Text = "filtro habitaculo"
         '
         'txtFiltroCombustible
         '
+        Me.txtFiltroCombustible.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtFiltroCombustible.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFiltroCombustible.Location = New System.Drawing.Point(476, 115)
         Me.txtFiltroCombustible.Name = "txtFiltroCombustible"
-        Me.txtFiltroCombustible.Size = New System.Drawing.Size(122, 24)
+        Me.txtFiltroCombustible.Size = New System.Drawing.Size(122, 26)
         Me.txtFiltroCombustible.TabIndex = 8
         '
         'txtFiltroAire
         '
+        Me.txtFiltroAire.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtFiltroAire.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFiltroAire.Location = New System.Drawing.Point(476, 154)
         Me.txtFiltroAire.Name = "txtFiltroAire"
-        Me.txtFiltroAire.Size = New System.Drawing.Size(122, 24)
+        Me.txtFiltroAire.Size = New System.Drawing.Size(122, 26)
         Me.txtFiltroAire.TabIndex = 9
         '
         'label10
         '
         Me.label10.AutoSize = True
+        Me.label10.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label10.Location = New System.Drawing.Point(323, 155)
         Me.label10.Name = "label10"
-        Me.label10.Size = New System.Drawing.Size(70, 18)
+        Me.label10.Size = New System.Drawing.Size(73, 18)
         Me.label10.TabIndex = 17
-        Me.label10.Text = "Filtro Aire"
+        Me.label10.Text = "filtro aire"
         '
         'txtFiltroAceite
         '
+        Me.txtFiltroAceite.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtFiltroAceite.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFiltroAceite.Location = New System.Drawing.Point(476, 76)
         Me.txtFiltroAceite.Name = "txtFiltroAceite"
-        Me.txtFiltroAceite.Size = New System.Drawing.Size(122, 24)
+        Me.txtFiltroAceite.Size = New System.Drawing.Size(122, 26)
         Me.txtFiltroAceite.TabIndex = 7
         '
         'txtColor
         '
+        Me.txtColor.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtColor.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtColor.Location = New System.Drawing.Point(151, 456)
         Me.txtColor.Name = "txtColor"
-        Me.txtColor.Size = New System.Drawing.Size(141, 24)
+        Me.txtColor.Size = New System.Drawing.Size(141, 26)
         Me.txtColor.TabIndex = 6
         '
         'label6
         '
         Me.label6.AutoSize = True
+        Me.label6.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label6.Location = New System.Drawing.Point(80, 456)
         Me.label6.Name = "label6"
         Me.label6.Size = New System.Drawing.Size(45, 18)
         Me.label6.TabIndex = 13
-        Me.label6.Text = "Color"
+        Me.label6.Text = "color"
         '
         'label7
         '
         Me.label7.AutoSize = True
+        Me.label7.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label7.Location = New System.Drawing.Point(323, 117)
         Me.label7.Name = "label7"
-        Me.label7.Size = New System.Drawing.Size(128, 18)
+        Me.label7.Size = New System.Drawing.Size(135, 18)
         Me.label7.TabIndex = 12
-        Me.label7.Text = "Filtro Combustible"
+        Me.label7.Text = "filtro combustible"
         '
         'label8
         '
         Me.label8.AutoSize = True
+        Me.label8.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label8.Location = New System.Drawing.Point(323, 82)
         Me.label8.Name = "label8"
-        Me.label8.Size = New System.Drawing.Size(85, 18)
+        Me.label8.Size = New System.Drawing.Size(90, 18)
         Me.label8.TabIndex = 11
-        Me.label8.Text = "Filtro Aceite"
+        Me.label8.Text = "filtro aceite"
         '
         'txtMarca
         '
+        Me.txtMarca.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtMarca.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMarca.Location = New System.Drawing.Point(150, 296)
         Me.txtMarca.Name = "txtMarca"
-        Me.txtMarca.Size = New System.Drawing.Size(142, 24)
+        Me.txtMarca.Size = New System.Drawing.Size(142, 26)
         Me.txtMarca.TabIndex = 2
         '
         'txtPatente
         '
+        Me.txtPatente.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtPatente.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPatente.Location = New System.Drawing.Point(150, 416)
         Me.txtPatente.Name = "txtPatente"
-        Me.txtPatente.Size = New System.Drawing.Size(142, 24)
+        Me.txtPatente.Size = New System.Drawing.Size(142, 26)
         Me.txtPatente.TabIndex = 5
         '
         'txtAnio
         '
+        Me.txtAnio.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtAnio.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAnio.Location = New System.Drawing.Point(151, 375)
         Me.txtAnio.Name = "txtAnio"
-        Me.txtAnio.Size = New System.Drawing.Size(141, 24)
+        Me.txtAnio.Size = New System.Drawing.Size(141, 26)
         Me.txtAnio.TabIndex = 4
         '
         'txtModelo
         '
+        Me.txtModelo.BackColor = System.Drawing.Color.OliveDrab
+        Me.txtModelo.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtModelo.Location = New System.Drawing.Point(150, 335)
         Me.txtModelo.Name = "txtModelo"
-        Me.txtModelo.Size = New System.Drawing.Size(142, 24)
+        Me.txtModelo.Size = New System.Drawing.Size(142, 26)
         Me.txtModelo.TabIndex = 3
         '
         'label2
         '
         Me.label2.AutoSize = True
+        Me.label2.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label2.Location = New System.Drawing.Point(80, 299)
         Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(50, 18)
+        Me.label2.Size = New System.Drawing.Size(55, 18)
         Me.label2.TabIndex = 1
-        Me.label2.Text = "Marca"
+        Me.label2.Text = "marca"
         '
         'label5
         '
         Me.label5.AutoSize = True
+        Me.label5.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label5.Location = New System.Drawing.Point(80, 335)
         Me.label5.Name = "label5"
-        Me.label5.Size = New System.Drawing.Size(58, 18)
+        Me.label5.Size = New System.Drawing.Size(64, 18)
         Me.label5.TabIndex = 4
-        Me.label5.Text = "Modelo"
+        Me.label5.Text = "modelo"
         '
         'label1
         '
         Me.label1.AutoSize = True
+        Me.label1.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label1.Location = New System.Drawing.Point(80, 99)
         Me.label1.Name = "label1"
-        Me.label1.Size = New System.Drawing.Size(53, 18)
+        Me.label1.Size = New System.Drawing.Size(55, 18)
         Me.label1.TabIndex = 0
-        Me.label1.Text = "Cliente"
+        Me.label1.Text = "cliente"
         '
         'label4
         '
         Me.label4.AutoSize = True
+        Me.label4.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label4.Location = New System.Drawing.Point(80, 419)
         Me.label4.Name = "label4"
-        Me.label4.Size = New System.Drawing.Size(58, 18)
+        Me.label4.Size = New System.Drawing.Size(65, 18)
         Me.label4.TabIndex = 3
-        Me.label4.Text = "Patente"
+        Me.label4.Text = "patente"
         '
         'label3
         '
         Me.label3.AutoSize = True
+        Me.label3.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label3.Location = New System.Drawing.Point(80, 375)
         Me.label3.Name = "label3"
-        Me.label3.Size = New System.Drawing.Size(34, 18)
+        Me.label3.Size = New System.Drawing.Size(36, 18)
         Me.label3.TabIndex = 2
-        Me.label3.Text = "Año"
+        Me.label3.Text = "año"
         '
         'ClientesTableAdapter
         '
@@ -442,9 +495,10 @@ Partial Class FrmAgregarNuevoAuto
         Me.Controls.Add(Me.button1)
         Me.Controls.Add(Me.groupBox1)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmAgregarNuevoAuto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "AGREGAR AUTO"
+        Me.Text = "agregar auto - tallo"
         Me.groupBox1.ResumeLayout(False)
         Me.groupBox1.PerformLayout()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

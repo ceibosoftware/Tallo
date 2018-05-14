@@ -22,6 +22,7 @@ Partial Class FrmContrasenia
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmContrasenia))
         Me.etContrasenia = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.button2 = New System.Windows.Forms.Button()
@@ -32,7 +33,8 @@ Partial Class FrmContrasenia
         '
         'etContrasenia
         '
-        Me.etContrasenia.Location = New System.Drawing.Point(106, 37)
+        Me.etContrasenia.BackColor = System.Drawing.Color.OliveDrab
+        Me.etContrasenia.Location = New System.Drawing.Point(56, 58)
         Me.etContrasenia.Name = "etContrasenia"
         Me.etContrasenia.Size = New System.Drawing.Size(135, 20)
         Me.etContrasenia.TabIndex = 0
@@ -40,35 +42,41 @@ Partial Class FrmContrasenia
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 40)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(78, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 13)
+        Me.Label1.Size = New System.Drawing.Size(91, 18)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Contraseña"
+        Me.Label1.Text = "contraseña"
         '
         'button2
         '
         Me.button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.button2.Image = Global.BecharaVB.My.Resources.Resources.icono_eliminar
+        Me.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.button2.Image = Global.BecharaVB.My.Resources.Resources.eliminar
         Me.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.button2.Location = New System.Drawing.Point(134, 111)
         Me.button2.Name = "button2"
         Me.button2.Size = New System.Drawing.Size(92, 37)
         Me.button2.TabIndex = 6
-        Me.button2.Text = "Cancelar"
+        Me.button2.Text = "cancelar"
         Me.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button2.UseVisualStyleBackColor = False
         '
         'button1
         '
-        Me.button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.button1.Image = Global.BecharaVB.My.Resources.Resources.tilde
+        Me.button1.BackColor = System.Drawing.Color.OliveDrab
+        Me.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.button1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.button1.Image = Global.BecharaVB.My.Resources.Resources.check
         Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.button1.Location = New System.Drawing.Point(30, 111)
         Me.button1.Name = "button1"
         Me.button1.Size = New System.Drawing.Size(86, 37)
         Me.button1.TabIndex = 5
-        Me.button1.Text = "Aceptar"
+        Me.button1.Text = "aceptar"
         Me.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.button1.UseVisualStyleBackColor = False
         '
@@ -94,9 +102,10 @@ Partial Class FrmContrasenia
         Me.ClientSize = New System.Drawing.Size(338, 237)
         Me.Controls.Add(Me.GroupBox1)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmContrasenia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Contraseña"
+        Me.Text = "contraseña - tallo"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

@@ -23,7 +23,8 @@ Partial Class FrmReporteTipoTrabajo
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReporteTipoTrabajo))
         Me.ordentrabajo_has_tipotrabajoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RptTiposTrabajos = New BecharaVB.RptTiposTrabajos()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
@@ -51,9 +52,9 @@ Partial Class FrmReporteTipoTrabajo
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource3.Name = "DataSet1"
-        ReportDataSource3.Value = Me.ordentrabajo_has_tipotrabajoBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.ordentrabajo_has_tipotrabajoBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "BecharaVB.Report4.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 24)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -75,11 +76,12 @@ Partial Class FrmReporteTipoTrabajo
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(194, 1)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Ver Todos"
+        Me.Button1.Text = "ver todos"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'dtpfecha2
@@ -109,7 +111,10 @@ Partial Class FrmReporteTipoTrabajo
         '
         'cmbreporte
         '
+        Me.cmbreporte.BackColor = System.Drawing.Color.OliveDrab
         Me.cmbreporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbreporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmbreporte.ForeColor = System.Drawing.Color.OliveDrab
         Me.cmbreporte.FormattingEnabled = True
         Me.cmbreporte.Items.AddRange(New Object() {"Fecha"})
         Me.cmbreporte.Location = New System.Drawing.Point(12, 0)
@@ -129,18 +134,17 @@ Partial Class FrmReporteTipoTrabajo
         Me.Controls.Add(Me.cmbreporte)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmReporteTipoTrabajo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmReporteTipoTrabajo"
+        Me.Text = "reporte por tipo de trabajo - tallo"
         CType(Me.ordentrabajo_has_tipotrabajoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RptTiposTrabajos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents Rpttrabajos As RptTrabajos
     Friend WithEvents ordentrabajo_has_tipotrabajoBindingSource As BindingSource
     Friend WithEvents RptTiposTrabajos As RptTiposTrabajos
@@ -151,4 +155,5 @@ Partial Class FrmReporteTipoTrabajo
     Friend WithEvents dtpfecha1 As DateTimePicker
     Friend WithEvents chkBechara2 As CheckBox
     Friend WithEvents cmbreporte As ComboBox
+    Private WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class

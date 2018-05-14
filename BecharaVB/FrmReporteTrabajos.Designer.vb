@@ -24,6 +24,7 @@ Partial Class FrmReporteTrabajos
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReporteTrabajos))
         Me.clientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RptClienteTrabajo = New BecharaVB.RptClienteTrabajo()
         Me.repor = New Microsoft.Reporting.WinForms.ReportViewer()
@@ -74,7 +75,10 @@ Partial Class FrmReporteTrabajos
         '
         'cmbreporte
         '
+        Me.cmbreporte.BackColor = System.Drawing.Color.OliveDrab
         Me.cmbreporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbreporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmbreporte.ForeColor = System.Drawing.Color.OliveDrab
         Me.cmbreporte.FormattingEnabled = True
         Me.cmbreporte.Items.AddRange(New Object() {"Fecha", "Repuestos Bechara"})
         Me.cmbreporte.Location = New System.Drawing.Point(12, 2)
@@ -110,11 +114,12 @@ Partial Class FrmReporteTrabajos
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Location = New System.Drawing.Point(202, 0)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Ver Todos"
+        Me.Button1.Text = "ver todos"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'FrmReporteTrabajos
@@ -129,9 +134,10 @@ Partial Class FrmReporteTrabajos
         Me.Controls.Add(Me.cmbreporte)
         Me.Controls.Add(Me.repor)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmReporteTrabajos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmReporteTrabajos"
+        Me.Text = "reporte trabajos - tallo"
         CType(Me.clientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RptClienteTrabajo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -139,7 +145,6 @@ Partial Class FrmReporteTrabajos
 
     End Sub
     Friend WithEvents Rpttrabajos As RptTrabajos
-    Friend WithEvents repor As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents clientesBindingSource As BindingSource
     Friend WithEvents RptClienteTrabajo As RptClienteTrabajo
     Friend WithEvents clientesTableAdapter As RptClienteTrabajoTableAdapters.clientesTableAdapter
@@ -149,4 +154,5 @@ Partial Class FrmReporteTrabajos
     Friend WithEvents dtpfecha1 As DateTimePicker
     Friend WithEvents dtpfecha2 As DateTimePicker
     Friend WithEvents Button1 As Button
+    Private WithEvents repor As Microsoft.Reporting.WinForms.ReportViewer
 End Class
